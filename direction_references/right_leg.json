@@ -1,0 +1,55 @@
+{
+  "format_version": 1,
+  "created_at": "2026-07-30T16:10:29",
+  "source_robot_reference": "/home/duck/open_duck_mini_runtime/direction_references/robot.json",
+  "expected_ids": [
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "note": "由装配正确整机母基准自动裁剪；部件检测须保持与母基准一致的安装朝向和支撑条件",
+  "joint_profiles": {
+    "right_hip_roll": {
+      "servo_id": 11,
+      "signature_a": {
+        "10": 0.0,
+        "11": 0.015786,
+        "12": 0.0,
+        "13": 0.0,
+        "14": 0.0
+      }
+    },
+    "right_hip_pitch": {
+      "servo_id": 12,
+      "signature_a": {
+        "10": 0.0,
+        "11": 0.0,
+        "12": -0.085429,
+        "13": 0.0,
+        "14": 0.0
+      }
+    },
+    "right_knee": {
+      "servo_id": 13,
+      "signature_a": {
+        "10": 0.0,
+        "11": 0.000929,
+        "12": 0.000929,
+        "13": 0.001857,
+        "14": 0.0
+      }
+    },
+    "right_ankle": {
+      "servo_id": 14,
+      "signature_a": {
+        "10": 0.0,
+        "11": 0.000929,
+        "12": 0.004643,
+        "13": -0.000929,
+        "14": 0.001857
+      }
+    }
+  }
+}

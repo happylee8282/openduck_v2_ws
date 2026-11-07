@@ -1,0 +1,41 @@
+[Unit]
+Description=Open Duck Mini walking runtime
+Wants=bluetooth.service network-online.target sound.target
+Requires=user@1000.service
+After=bluetooth.service network-online.target sound.target user@1000.service
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+User=duck
+WorkingDirectory=/home/duck/open_duck_mini_runtime
+Environment=DUCK_APP_DIR=/home/duck/open_duck_mini_runtime
+Environment=DUCK_PYTHON=/home/duck/.venv/bin/python
+Environment=DUCK_ONNX_MODEL=BEST_WALK_ONNX_2.onnx
+Environment=DUCK_CONTROL_FREQ=50
+Environment=DUCK_KP=22
+Environment=DUCK_KD=0
+Environment=DUCK_ACTION_SCALE=0.2
+Environment=DUCK_MIN_MOTOR_VOLTAGE=6.3
+Environment=DUCK_POWER_LOG_INTERVAL=1.0
+Environment=DUCK_WAIT_CONTROLLER=1
+Environment=DUCK_WAIT_CONTROLLER_TIMEOUT=0
+Environment=PYTHONUNBUFFERED=1
+Environment=SDL_VIDEODRIVER=dummy
+Environment=SDL_AUDIODRIVER=pulseaudio
+Environment=XDG_RUNTIME_DIR=/run/user/1000
+Environment=PULSE_SERVER=unix:/run/user/1000/pulse/native
+Environment=PULSE_SINK=alsa_output.platform-soc_sound.stereo-fallback
+ExecStartPre=/bin/bash -c 'for ((i=0;i<90;i++)); do if [ -e /dev/ttyACM0 ] && [ -e /dev/i2c-1 ]; then exit 0; fi; sleep 1; done; echo "Serial or I2C device not ready"; exit 1'
+ExecStartPre=/home/duck/.venv/bin/python /home/duck/open_duck_mini_runtime/deploy/wait_for_audio.py --timeout 30
+ExecStart=/home/duck/open_duck_mini_runtime/run_duck.sh start-foreground
+ExecStop=/home/duck/open_duck_mini_runtime/run_duck.sh stop
+Restart=on-failure
+RestartSec=5
+TimeoutStartSec=135
+TimeoutStopSec=15
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
