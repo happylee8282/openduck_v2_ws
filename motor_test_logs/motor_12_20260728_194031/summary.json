@@ -1,0 +1,30 @@
+{
+  "metadata": {
+    "timestamp": "2026-07-28T19:40:31",
+    "port": "/dev/ttyACM0",
+    "baud": 1000000,
+    "motor_id": 12,
+    "original_kp": 22.0,
+    "original_ki": 0.0,
+    "original_kd": 0.0,
+    "kp_after": 22,
+    "kd_after": 0,
+    "amplitude_deg": 90.0,
+    "cycles": 3,
+    "half_cycle_s": 2.0,
+    "sample_period_s": 0.02,
+    "max_rmse_deg": 5.0,
+    "max_error_deg": 15.0,
+    "origin_position_deg": -179.912109375,
+    "waveform_direction": 1
+  },
+  "summary": {
+    "result": "FAIL",
+    "samples": 600,
+    "communication_errors": 0,
+    "rmse_deg": 6.517846565209747,
+    "max_abs_error_deg": 9.965945,
+    "mean_abs_error_deg": 5.674415655000001,
+    "peak_current": 4.0
+  }
+}

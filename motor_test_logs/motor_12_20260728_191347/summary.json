@@ -1,0 +1,28 @@
+{
+  "metadata": {
+    "timestamp": "2026-07-28T19:13:47",
+    "port": "/dev/ttyACM0",
+    "baud": 1000000,
+    "motor_id": 12,
+    "original_kp": 22.0,
+    "original_ki": 0.0,
+    "original_kd": 0.0,
+    "kp_after": 22,
+    "kd_after": 0,
+    "amplitude_deg": 90.0,
+    "cycles": 3,
+    "half_cycle_s": 2.0,
+    "sample_period_s": 0.02,
+    "origin_position_deg": -180.0,
+    "waveform_direction": 1
+  },
+  "summary": {
+    "result": "REVIEW",
+    "samples": 600,
+    "communication_errors": 0,
+    "rmse_deg": 6.490154408297422,
+    "max_abs_error_deg": 9.878125,
+    "mean_abs_error_deg": 5.650209811666667,
+    "peak_current": 4.0
+  }
+}

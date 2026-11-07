@@ -1,0 +1,43 @@
+{
+  "timestamp": "2026-07-28T19:30:39",
+  "command": "module",
+  "report_title": "OpenDuck Mini 腿/头部件中试报告",
+  "result": "FAIL",
+  "port": "/dev/ttyACM0",
+  "baud": 1000000,
+  "detected_project_ids": [
+    12
+  ],
+  "scan": {
+    "expected_ids": [
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "found_ids": [
+      12
+    ],
+    "missing_ids": [
+      10,
+      11,
+      13,
+      14
+    ],
+    "positions_deg": {
+      "12": -179.9121
+    },
+    "errors": {
+      "10": "RuntimeError: Operation timed out",
+      "11": "RuntimeError: Operation timed out",
+      "13": "RuntimeError: Operation timed out",
+      "14": "RuntimeError: Operation timed out"
+    }
+  },
+  "module": {
+    "key": "right_leg",
+    "name": "右腿"
+  },
+  "error": "RuntimeError: 右腿 ID 不完整：已识别 [12]；缺失 [10, 11, 13, 14]"
+}

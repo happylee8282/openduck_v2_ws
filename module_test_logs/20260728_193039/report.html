@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OpenDuck Mini 腿/头部件中试报告</title>
+<style>
+body{font-family:"Microsoft YaHei",Arial,sans-serif;max-width:1100px;margin:28px auto;padding:0 18px;color:#17202a}
+h1,h2{color:#17365d}.card{border:1px solid #ccd5df;border-radius:10px;padding:14px;margin:14px 0;background:#f8fafc}
+.pass{border-left:6px solid #15803d}.review{border-left:6px solid #b45309}.fail{border-left:6px solid #b91c1c}
+table{border-collapse:collapse;width:100%}th,td{border:1px solid #ccd5df;padding:7px;text-align:left}th{background:#eaf0f6}
+svg{width:100%;height:auto;background:#fff;border:1px solid #e5e7eb}.axis{stroke:#667085;stroke-width:1}
+.target{fill:none;stroke:#2563eb;stroke-width:2}.actual{fill:none;stroke:#dc2626;stroke-width:2}
+.legend span{display:inline-block;margin-right:18px}.target-dot{color:#2563eb}.actual-dot{color:#dc2626}
+</style>
+</head>
+<body>
+<h1>OpenDuck Mini 腿/头部件中试报告</h1>
+<div class="card fail">
+  <p><strong>总体结果：</strong>FAIL</p>
+  <p><strong>测试时间：</strong>2026-07-28T19:30:39</p>
+  <p><strong>运行项目：</strong>module</p>
+  <p><strong>固定通信：</strong>/dev/ttyACM0，1,000,000 baud</p>
+</div>
+<div class="card fail"><strong>终止原因：</strong>RuntimeError: 右腿 ID 不完整：已识别 [12]；缺失 [10, 11, 13, 14]</div>
+<h2>舵机扫描</h2>
+<div class="card">
+  <p><strong>已识别 ID：</strong>12</p>
+  <p><strong>缺失 ID：</strong>10, 11, 13, 14</p>
+</div>
+<h2>逐关节检测指标</h2>
+<table>
+<thead><tr><th>关节</th><th>ID</th><th>结果</th><th>样本数</th><th>RMSE(°)</th><th>最大误差(°)</th></tr></thead>
+<tbody><tr><td>right_hip_yaw</td><td>10</td><td>未测试</td><td>0</td><td>-</td><td>-</td></tr><tr><td>right_hip_roll</td><td>11</td><td>未测试</td><td>0</td><td>-</td><td>-</td></tr><tr><td>right_hip_pitch</td><td>12</td><td>未测试</td><td>0</td><td>-</td><td>-</td></tr><tr><td>right_knee</td><td>13</td><td>未测试</td><td>0</td><td>-</td><td>-</td></tr><tr><td>right_ankle</td><td>14</td><td>未测试</td><td>0</td><td>-</td><td>-</td></tr></tbody>
+</table>
+<h2>输入波形与实际波形</h2>
+<p class="legend"><span class="target-dot">● 蓝色：输入目标</span><span class="actual-dot">● 红色：实际位置</span></p>
+<div class="card">动作阶段未执行，因此没有波形数据。</div>
+</body>
+</html>

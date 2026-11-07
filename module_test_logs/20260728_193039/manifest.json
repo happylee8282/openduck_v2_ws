@@ -1,0 +1,10 @@
+{
+  "format_version": 1,
+  "created_at": "2026-07-28T19:30:39",
+  "command": "module",
+  "output_files": {
+    "summary": "summary.json",
+    "report": "report.html",
+    "motor_samples": "motor_samples.csv"
+  }
+}
