@@ -491,3 +491,15 @@ Ctrl+C  stop and turn torque off
 - left and right triggers to control the left and right antennas
 - LB (new!) press and hold to increase the walking frequency, kind of a sprint mode 🙂
 ```
+
+## 한국어 기술 문서
+
+Xbox·키보드·카메라 명령과 IMU·관절·발 센서 → 관측 벡터 → ONNX 보행 정책 → 서보 위치 명령으로 이어진다.
+
+- [런타임 모듈 및 관측·액션 형식](mini_bdx_runtime/README.md)
+- [보행·화살표 인식·하드웨어 시험](scripts/README.md)
+- [배포](deploy/README.md), [검출 샘플](assets/README.md), [조립 방향 기준](direction_references/README.md)
+- [실험 절차](docs/README.md), [코드 테스트](tests/README.md)
+- [단품 시험 기록](motor_test_logs/README.md), [모듈 시험 기록](module_test_logs/README.md), [실기 보행 기록](robot_logs/README.md)
+
+`run_duck.sh`의 기본 ONNX 파일명은 `WALK_BDXR_INSPIRED_272M.onnx`다. 해당 이름의 파일을 배포하거나, 사용할 모델을 `DUCK_ONNX_MODEL`로 지정한다.
