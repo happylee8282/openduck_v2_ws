@@ -1,0 +1,9 @@
+﻿stage,seed,duration_s,trials,accepted,gain,trim_m_s,vx_full_trial_m_s,world_x_m,world_y_m,demo_accepted,demo_max_abs_heading_deg,source
+전진 정책에 후진 명령,61,20.0,8,,0.85,0,0.001074784217053093,0.006329268217086792,0.012737378478050232,,,/home/happy/openduck_ws/open-duck-isaac-lab/validation/multiskill_2026-11-10/backward_baseline
+후진 PPO 원본,61,12.0,4,0,1,0,-0.13302329182624817,-1.6203461587429047,-0.0029709935188293457,,,/home/happy/openduck_ws/open-duck-isaac-lab/validation/multiskill_2026-11-10/backward_100_screen
+배율0.75,61,20.0,8,2,0.75,0,-0.11928699165582657,-2.4233747124671936,-0.026808515191078186,,,/home/happy/openduck_ws/open-duck-isaac-lab/validation/multiskill_2026-11-10/backward_100_calibrated
+배율0.40,61,20.0,8,8,0.4,0,-0.08405296038836241,-1.7099927365779877,-0.13055257499217987,,,/home/happy/openduck_ws/open-duck-isaac-lab/validation/multiskill_2026-11-10/backward_100_scale040
+배율0.55,62,20.0,8,3,0.55,0,-0.1012478033080697,-2.055071383714676,-0.16729827225208282,8,6.737095826059593,/home/happy/openduck_ws/open-duck-isaac-lab/validation/multiskill_2026-11-10/full_seed62
+측면 trim 추가,62,20.0,8,8,0.55,0.006,-0.100974359549582,-2.050877273082733,-0.09459058940410614,7,8.945791600326364,/home/happy/openduck_ws/open-duck-isaac-lab/validation/multiskill_2026-11-10/trim006_seed62
+정지 연결 보완,62,20.0,8,8,0.55,0.006,-0.100974359549582,-2.050877273082733,-0.09459058940410614,8,6.516456383319262,/home/happy/openduck_ws/open-duck-isaac-lab/validation/multiskill_2026-11-10/smooth_seed62
+독립 seed63,63,20.0,8,8,0.55,0.006,-0.10169545095413923,-2.066534847021103,-0.0980558842420578,8,5.914010219748866,/home/happy/openduck_ws/open-duck-isaac-lab/validation/multiskill_2026-11-10/smooth_seed63

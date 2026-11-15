@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "batch": 32,
+  "max_abs_error": 1.341104507446289e-07,
+  "input_shape": [
+    32,
+    101
+  ],
+  "output_shape": [
+    32,
+    14
+  ]
+}

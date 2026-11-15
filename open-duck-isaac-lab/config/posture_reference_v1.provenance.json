@@ -1,0 +1,11 @@
+{
+  "reference_sha256": "9883711af399320ae628c5fd638b773600fab227ef4a1f581a14d0cdf9b4c79c",
+  "source_standing_rollout": "validation/straight_walk_2026-11-10/candidate_seed44/rollout.npz",
+  "source_standing_rollout_sha256": "56652c4cb36e64522501773970789d5bbd2d9639c89f3c7fb0746a5f76da4d70",
+  "generator": "tools/build_posture_reference.py",
+  "generator_sha256": "6f0f251a3a0068cb87e17f3547396fb20e42f1249b21cf082d0aa16b1a369b8b",
+  "low_height_m": 0.13,
+  "com_shift_x_m": -0.02,
+  "physical_joint_stop_margin_rad": 0.022,
+  "validation": "Four full actuator-only reference probes survived; learned-policy validation is stored separately. Reference file is frozen and linked by the posture checkpoint contract."
+}

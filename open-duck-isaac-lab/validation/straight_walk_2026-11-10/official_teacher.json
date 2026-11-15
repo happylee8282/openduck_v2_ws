@@ -1,0 +1,16 @@
+{
+  "status": "imported_not_retrained",
+  "source": {
+    "type": "official_onnx_import",
+    "source": "/home/happy/Documents/Codex/2026-10-28/https-github-com-apirrone-open-duck/outputs/Open_Duck/Open_Duck_Mini/BEST_WALK_ONNX_2.onnx",
+    "sha256": "3c606f9381a1710cc8fecdb7442787dcbfce3ee9bc02a6f1224774ab2b3a1067",
+    "repository": "apirrone/Open_Duck_Mini",
+    "commit": "b23317a485b3cec7d8417f352478778b3475173c"
+  },
+  "max_output_error": 5.736947059631348e-07,
+  "hidden_dims": [
+    512,
+    256,
+    128
+  ]
+}

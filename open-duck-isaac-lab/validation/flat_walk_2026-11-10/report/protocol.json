@@ -1,0 +1,160 @@
+{
+  "date": "2026-11-10",
+  "purpose": "Initial flat-ground walking assessment, not hardware qualification",
+  "simulation": "Isaac Sim 5.0 / Isaac Lab 2.2 / RTX 5070",
+  "evaluation_seed": 43,
+  "duration_s": 20,
+  "trials_per_command": 8,
+  "commands": {
+    "stand": [
+      0,
+      0,
+      0
+    ],
+    "forward": [
+      0.1,
+      0,
+      0
+    ],
+    "backward": [
+      -0.1,
+      0,
+      0
+    ],
+    "left": [
+      0,
+      0.1,
+      0
+    ],
+    "right": [
+      0,
+      -0.1,
+      0
+    ],
+    "turn_left": [
+      0,
+      0,
+      0.5
+    ],
+    "turn_right": [
+      0,
+      0,
+      -0.5
+    ]
+  },
+  "initial_targets": {
+    "survival_rate_min": 0.9,
+    "translation_xy_rmse_max_m_s": 0.05,
+    "yaw_mae_max_rad_s": 0.2,
+    "translation_stable_landings_per_foot_min": 3,
+    "minimum_forward_displacement_fraction": 0.6,
+    "minimum_swing_lift_above_stance_m": 0.01
+  },
+  "contacts": "3 consecutive 20ms samples to debounce a contact change in final evaluations",
+  "termination": "Ground-relative trunk height <0.08m or trunk tilt >0.75rad",
+  "protocol": "First episode only, no respawns, errors before termination; inspect video for shuffling/sliding",
+  "training_stage_1": {
+    "iterations": 200,
+    "num_envs": 512,
+    "rollout_steps": 32,
+    "seed": 42,
+    "domain_randomization": true,
+    "commands": "default full planar velocity/yaw ranges"
+  },
+  "training_stage_2": {
+    "additional_iterations": 400,
+    "resume_iteration": 199,
+    "num_envs": 512,
+    "rollout_steps": 32,
+    "seed": 42,
+    "domain_randomization": true,
+    "vx": [
+      0.04,
+      0.12
+    ],
+    "vy": [
+      0,
+      0
+    ],
+    "yaw": [
+      0,
+      0
+    ],
+    "stand_probability": 0.1,
+    "target_foot_clearance_m": 0.025,
+    "target_step_length_m": 0.04,
+    "entropy_coef": 0.003,
+    "stopped_early": true,
+    "selected_checkpoint_iteration": 300,
+    "reason": "Correct initial interpenetration and mechanical self-collision before continuing"
+  },
+  "software_fix": "Bounded 32-material pool prevents PhysX 64K unique material exhaustion under parallel training",
+  "final_commands": {
+    "stand": [
+      0,
+      0,
+      0
+    ],
+    "forward": [
+      0.1,
+      0,
+      0
+    ]
+  },
+  "geometry_fix": {
+    "urdf_sha256": "e8aa9c589671e6423f275cb584e019dbee1972c07a7d2cf9a16539689d58693d",
+    "mass_kg": 2.107140705,
+    "physical_links": 15,
+    "moving_joints": 14,
+    "mesh_files": 55,
+    "urdf_inertia_limits_meshes": "passed",
+    "isaac_usd_readback": "not_run",
+    "home_collision_min_z_relative_trunk_m": -0.16682995381765672,
+    "lowest_collision_link": "foot_assembly_2",
+    "spawn_height_m": 0.172,
+    "initial_ground_clearance_m": 0.005170046182343263
+  },
+  "mechanical_collision_filter": {
+    "ancestor_distance": 2,
+    "filtered_pairs": 25,
+    "cross_limb_collisions_preserved": true
+  },
+  "training_stage_3": {
+    "iterations": 400,
+    "first_iteration": 300,
+    "last_iteration": 699,
+    "num_envs": 512,
+    "rollout_steps": 32,
+    "seed": 42,
+    "physical_fixes_applied": true,
+    "domain_randomization": true,
+    "vx": [
+      0.04,
+      0.12
+    ],
+    "vy": [
+      0,
+      0
+    ],
+    "yaw": [
+      0,
+      0
+    ],
+    "foot_clearance_target_m": 0.06,
+    "target_step_length_m": 0.04,
+    "entropy_coef": 0.003
+  },
+  "selected_policy_lineage": {
+    "updates": 702,
+    "transitions": 11501568,
+    "note": "200 initial updates + 102 updates through resumed model_300 + 400 corrected updates; resume repeats the stored iteration index"
+  },
+  "video_physx_buffer_capacities": {
+    "gpu_max_rigid_contact_count": 262144,
+    "gpu_max_rigid_patch_count": 32768,
+    "gpu_found_lost_pairs_capacity": 65536,
+    "gpu_found_lost_aggregate_pairs_capacity": 262144,
+    "gpu_total_aggregate_pairs_capacity": 262144
+  },
+  "video_buffer_note": "Reduced allocation capacities for one robot after default-buffer GPU OOM; collision detection and solver settings are unchanged. Successful final video has 500 frames at 25fps."
+}

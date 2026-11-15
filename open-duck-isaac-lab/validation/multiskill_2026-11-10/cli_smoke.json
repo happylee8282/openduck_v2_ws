@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "steps": 128,
+  "falls": 0,
+  "bundle": "/home/happy/openduck_ws/open-duck-isaac-lab/config/multiskill_policy.json",
+  "forward_sha256": "8ed31af1c07788fe1c4612af80e04bc1027163fd8b8bc05468a18111d113d284",
+  "note": "Execution-path check; see independent multiskill assessments for quality criteria."
+}

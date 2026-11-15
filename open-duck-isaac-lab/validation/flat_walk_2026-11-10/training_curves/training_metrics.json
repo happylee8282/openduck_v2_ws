@@ -1,0 +1,38 @@
+{
+  "Train/mean_reward": {
+    "first_window_mean": 174.63225250244142,
+    "last_window_mean": 408.48927307128906,
+    "last_iteration": 114,
+    "window": 10
+  },
+  "Train/mean_episode_length": {
+    "first_window_mean": 41.67500038146973,
+    "last_window_mean": 77.06599960327148,
+    "last_iteration": 114,
+    "window": 10
+  },
+  "Stats/commanded_speed": {
+    "first_window_mean": 0.13332508951425553,
+    "last_window_mean": 0.12894094437360765,
+    "last_iteration": 114,
+    "window": 10
+  },
+  "Stats/velocity_along_command": {
+    "first_window_mean": -0.0012287500430829823,
+    "last_window_mean": 0.034072748757898806,
+    "last_iteration": 114,
+    "window": 10
+  },
+  "Reward/lin_vel_track": {
+    "first_window_mean": 1.4564030289649963,
+    "last_window_mean": 1.8544722557067872,
+    "last_iteration": 114,
+    "window": 10
+  },
+  "Penalty/no_motion": {
+    "first_window_mean": 0.35404408276081084,
+    "last_window_mean": 0.42351205050945284,
+    "last_iteration": 114,
+    "window": 10
+  }
+}

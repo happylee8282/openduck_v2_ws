@@ -1,0 +1,23 @@
+{
+  "status": "incomplete",
+  "issues": [
+    "source must be measured_hardware",
+    "measured_mass_kg requires a finite positive measurement",
+    "measured_supply_v requires a finite positive measurement",
+    "command_latency_p95_s requires a finite positive measurement",
+    "imu_latency_p95_s requires a finite positive measurement",
+    "all 14 named joint zero offsets must be measured",
+    "motor_order_verified must be verified on hardware",
+    "joint_signs_verified must be verified on hardware",
+    "imu_axes_verified must be verified on hardware",
+    "feet_left_right_verified must be verified on hardware",
+    "servo_fit.effort_nm requires a measured positive value",
+    "servo_fit.kp requires a measured positive value",
+    "servo_fit.damping_nm_s requires a measured positive value",
+    "servo_fit.coulomb_friction_nm requires a measured positive value",
+    "servo_fit.armature_kg_m2 requires a measured positive value",
+    "servo_fit.max_speed_rad_s requires a measured positive value",
+    "measurement log SHA-256 is required"
+  ],
+  "note": "Record validity does not establish walking performance or replace fitting the simulator to these measurements."
+}

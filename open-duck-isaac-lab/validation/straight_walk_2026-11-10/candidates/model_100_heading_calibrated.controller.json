@@ -1,0 +1,27 @@
+{
+  "status": "controller_configured_not_retrained",
+  "iteration_unchanged": 100,
+  "weights_identical": true,
+  "output": "/home/happy/openduck_ws/open-duck-isaac-lab/validation/straight_walk_2026-11-10/candidates/model_100_heading_calibrated.pt",
+  "sha256": "8ed31af1c07788fe1c4612af80e04bc1027163fd8b8bc05468a18111d113d284",
+  "control_profile": {
+    "head_control_mode": "stabilized",
+    "target_filter_tau_s": 0.0,
+    "head_target_speed": 1.0,
+    "reward_profile": "straight_v6",
+    "heading_hold_kp": 2.0,
+    "heading_hold_max_rate": 0.35,
+    "heading_hold_filter_tau": 0.25,
+    "forward_command_scale": 0.85,
+    "lateral_command_trim": 0.0
+  },
+  "provenance": {
+    "type": "IMU attitude heading hold and command calibration; weights unchanged",
+    "source_checkpoint": "/home/happy/openduck_ws/open-duck-isaac-lab/logs/rsl_rl/open_duck_v2_straight/2026-11-10_02-41-01_aligned_gait_heading_v6/model_100.pt",
+    "source_sha256": "fc0c30cd8bd301df82cb27d6bfdeb5194b76361973eca5230b6673ba81daf97d",
+    "calibration_evaluation": "/home/happy/openduck_ws/open-duck-isaac-lab/validation/straight_walk_2026-11-10/v6_100_heading/evaluation.json",
+    "calibration_evaluation_sha256": "a8cb0afff2d32b01ad7b208b87fa947e02dd3838cdaec4ad36231771f911a781",
+    "additional_sensor": "canonical trunk IMU attitude wxyz",
+    "hardware_calibrated": false
+  }
+}

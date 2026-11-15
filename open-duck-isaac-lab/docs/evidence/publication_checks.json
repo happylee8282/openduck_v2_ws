@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-15",
+  "existing_pi_files_changed": [],
+  "learning_control_python_changed": [],
+  "cpu_regression_tests": 47,
+  "cpu_regression_status": "passed",
+  "policy_download_checks": 6,
+  "policy_download_status": "passed",
+  "actual_isaac_gpu_check": "validation/publication_isaac_check.json",
+  "actual_isaac_steps": 32,
+  "actual_isaac_status": "passed",
+  "new_training_performed": false,
+  "historic_nominal_policy_trials": 80,
+  "historic_nominal_policy_passed": 80,
+  "historic_policy_test_date": "2026-11-10",
+  "hardware_validated": false,
+  "policy_sha256": {
+    "posture_v2.pt": "0d65497d27236e745d4702cc4266ec69faa5de340bed8b429f5040fc0c772eb9",
+    "backward_v2.pt": "45520602afb003d097b5c7aff178cb87b1d0125825d317b2dc14c687d0dc70ae",
+    "flat_straight_v2.pt": "8ed31af1c07788fe1c4612af80e04bc1027163fd8b8bc05468a18111d113d284"
+  }
+}

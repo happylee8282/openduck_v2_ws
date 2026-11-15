@@ -1,3 +1,39 @@
+# Open Duck Mini v2 Workspace
+
+Open Duck Mini v2의 Raspberry Pi 실물 런타임과 Isaac Lab 강화학습 패키지를 함께 보관합니다.
+
+| 구성 | 위치 | 용도 |
+|---|---|---|
+| Isaac Lab RL | [open-duck-isaac-lab/](open-duck-isaac-lab/) | PPO 학습, 전진·정지·후진·낮은 자세·기립 재생 및 수치 평가 |
+| Raspberry Pi 런타임 | 기존 루트의 `run_duck.sh`, `mini_bdx_runtime/`, `scripts/` | 기존 실물 서보·IMU·카메라 실행 |
+
+**Isaac Lab 평지 기준 물성 검증은 80/80회 통과했습니다. 실물 3정책 통합은 아직 검증하지 않았습니다.**
+두 실행 체계의 관측·제어 설정이 다르므로 새 `.pt`를 기존 Pi 런타임에 곧바로 넣어 쓰는 구조가 아닙니다.
+
+- [처음 설치와 실행](open-duck-isaac-lab/docs/PUBLIC_SETUP.md)
+- [한 줄씩 따라 하는 CLI 튜토리얼](open-duck-isaac-lab/docs/CLI_TUTORIAL.md)
+- [전체 RL 가이드](open-duck-isaac-lab/docs/PACKAGE_RL_GUIDE.md)
+- [개발 단계별 설정과 수치 비교](open-duck-isaac-lab/docs/POLICY_EVOLUTION.md)
+- [정책 3개·영상·PDF·발표자료 다운로드](https://github.com/happylee8282/openduck_v2_ws/releases/tag/v0.2.0-isaac-multiskill)
+
+Isaac 환경이 설치되어 있다면:
+
+```bash
+python3 open-duck-isaac-lab/tools/download_policies.py
+export ISAAC_PYTHON="$HOME/miniconda3/envs/env_isaaclab/bin/python"
+export ISAACLAB_PATH="$HOME/IsaacLab"
+./duck.sh convert --headless
+./duck.sh test
+./duck.sh play-skills --demo
+```
+
+`duck.sh`는 학습용 실행기이고 `run_duck.sh`는 기존 실물 실행기입니다.
+상류 소스와 라이선스는 [출처 문서](open-duck-isaac-lab/docs/UPSTREAM_SOURCES.md)를 확인하세요.
+
+---
+
+아래는 기존 Raspberry Pi 실행 안내입니다.
+
 # Open Duck Mini Runtime
 
 ## Robot Runtime Helper

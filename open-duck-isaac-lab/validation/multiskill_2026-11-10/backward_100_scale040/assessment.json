@@ -1,0 +1,570 @@
+{
+  "checkpoint": "/home/happy/openduck_ws/open-duck-isaac-lab/validation/multiskill_2026-11-10/backward_100_scale040.pt",
+  "source_evaluation": "/home/happy/openduck_ws/open-duck-isaac-lab/validation/multiskill_2026-11-10/backward_100_scale040/evaluation.json",
+  "criteria_note": "Declared engineering targets for this experiment. Cycle-averaged errors exclude the first 2 s; raw errors remain in each trial. World displacement and heading independently catch slow drift. Each trial must meet every listed check; each command needs >=90% accepted trials. No post-fall samples or respawns count.",
+  "head_control_mode": "stabilized",
+  "controller": {
+    "heading_hold_kp": 2.0,
+    "heading_hold_max_rate": 0.35,
+    "heading_hold_filter_tau": 0.25,
+    "forward_command_scale": 0.4,
+    "lateral_command_trim": 0.0,
+    "heading_sensor": "virtual trunk IMU attitude; ideal nominal, biased/noisy/delayed when randomized"
+  },
+  "randomized": false,
+  "seed": 61,
+  "accepted": true,
+  "summary": {
+    "backward": {
+      "trials": 8,
+      "survived": 8,
+      "accepted": 8,
+      "acceptance_rate": 1.0,
+      "mean_world_displacement_xy_m": [
+        -1.7102621346712112,
+        -0.13081182539463043
+      ],
+      "mean_final_heading_rad": 0.013591992435976863,
+      "mean_cycle_xy_rmse_m_s": 0.019362173276022077,
+      "mean_cycle_yaw_mae_rad_s": 0.019616125733591616
+    }
+  },
+  "trials": [
+    {
+      "xy_rmse_m_s": 0.17407676577568054,
+      "yaw_mae_rad_s": 0.14140261709690094,
+      "mean_velocity": [
+        -0.08503816276788712,
+        -0.004908970557153225,
+        0.003642433322966099
+      ],
+      "displacement_xy_m": [
+        -1.730398178100586,
+        -0.14915037155151367
+      ],
+      "mean_height_m": 0.17417174577713013,
+      "head_joint_velocity_rms_rad_s": [
+        0.35786551237106323,
+        0.4083922505378723,
+        0.48848724365234375,
+        0.6720824837684631
+      ],
+      "mean_torque_saturation": 0.0002857143117580563,
+      "mean_action_clipping": 0.0,
+      "command": "backward",
+      "trial": 0,
+      "survived": true,
+      "survival_s": 20.0,
+      "foot_landings": [
+        94.0,
+        61.0
+      ],
+      "stable_foot_landings": [
+        41.0,
+        37.0
+      ],
+      "metrics": {
+        "cycle_period_s": 0.54,
+        "cycle_xy_rmse_m_s": 0.018656082451343536,
+        "cycle_yaw_mae_rad_s": 0.021479930728673935,
+        "final_heading_rad": 0.01605803892016411,
+        "max_abs_heading_rad": 0.05600734055042267,
+        "world_displacement_xy_m": [
+          -1.7306079864501953,
+          -0.14926791191101074
+        ],
+        "peak_swing_lift_above_stance_m": [
+          0.03522546589374542,
+          0.016637392342090607
+        ],
+        "steady_mean_velocity": [
+          -0.08678057789802551,
+          -0.00358370179310441,
+          0.0021553714759647846
+        ]
+      },
+      "checks": {
+        "survived_full_trial": true,
+        "speed_along_command_0_08_to_0_12_m_s": true,
+        "cycle_xy_rmse_at_most_0_04_m_s": true,
+        "cycle_yaw_mae_at_most_0_06_rad_s": true,
+        "distance_80_to_120_percent_of_target": true,
+        "net_lateral_at_most_0_15_m": true,
+        "final_heading_at_most_0_12_rad": true,
+        "max_heading_at_most_0_15_rad": true,
+        "both_feet_at_least_3_stable_landings": true,
+        "both_feet_lift_at_least_10_mm": true
+      },
+      "accepted": true
+    },
+    {
+      "xy_rmse_m_s": 0.17602264881134033,
+      "yaw_mae_rad_s": 0.13199283182621002,
+      "mean_velocity": [
+        -0.0827431008219719,
+        -0.002711520530283451,
+        0.0004383702762424946
+      ],
+      "displacement_xy_m": [
+        -1.6818053722381592,
+        -0.09289991855621338
+      ],
+      "mean_height_m": 0.1741112470626831,
+      "head_joint_velocity_rms_rad_s": [
+        0.36124783754348755,
+        0.38831400871276855,
+        0.48109713196754456,
+        0.6767061948776245
+      ],
+      "mean_torque_saturation": 0.0002142857265425846,
+      "mean_action_clipping": 0.0,
+      "command": "backward",
+      "trial": 1,
+      "survived": true,
+      "survival_s": 20.0,
+      "foot_landings": [
+        97.0,
+        57.0
+      ],
+      "stable_foot_landings": [
+        40.0,
+        37.0
+      ],
+      "metrics": {
+        "cycle_period_s": 0.54,
+        "cycle_xy_rmse_m_s": 0.02013459987938404,
+        "cycle_yaw_mae_rad_s": 0.018299691379070282,
+        "final_heading_rad": -0.002887117676436901,
+        "max_abs_heading_rad": 0.053726039826869965,
+        "world_displacement_xy_m": [
+          -1.6819751262664795,
+          -0.09314167499542236
+        ],
+        "peak_swing_lift_above_stance_m": [
+          0.03140272945165634,
+          0.015970539301633835
+        ],
+        "steady_mean_velocity": [
+          -0.0839494988322258,
+          -0.0009293070761486888,
+          -0.0012518680887296796
+        ]
+      },
+      "checks": {
+        "survived_full_trial": true,
+        "speed_along_command_0_08_to_0_12_m_s": true,
+        "cycle_xy_rmse_at_most_0_04_m_s": true,
+        "cycle_yaw_mae_at_most_0_06_rad_s": true,
+        "distance_80_to_120_percent_of_target": true,
+        "net_lateral_at_most_0_15_m": true,
+        "final_heading_at_most_0_12_rad": true,
+        "max_heading_at_most_0_15_rad": true,
+        "both_feet_at_least_3_stable_landings": true,
+        "both_feet_lift_at_least_10_mm": true
+      },
+      "accepted": true
+    },
+    {
+      "xy_rmse_m_s": 0.17402707040309906,
+      "yaw_mae_rad_s": 0.14070656895637512,
+      "mean_velocity": [
+        -0.0809682160615921,
+        -0.0034195855259895325,
+        0.0011847782880067825
+      ],
+      "displacement_xy_m": [
+        -1.6531263589859009,
+        -0.11045777797698975
+      ],
+      "mean_height_m": 0.1739751547574997,
+      "head_joint_velocity_rms_rad_s": [
+        0.3531484007835388,
+        0.3955645263195038,
+        0.48054593801498413,
+        0.6698287725448608
+      ],
+      "mean_torque_saturation": 0.0003571428533177823,
+      "mean_action_clipping": 0.0,
+      "command": "backward",
+      "trial": 2,
+      "survived": true,
+      "survival_s": 20.0,
+      "foot_landings": [
+        99.0,
+        72.0
+      ],
+      "stable_foot_landings": [
+        41.0,
+        37.0
+      ],
+      "metrics": {
+        "cycle_period_s": 0.54,
+        "cycle_xy_rmse_m_s": 0.023645462468266487,
+        "cycle_yaw_mae_rad_s": 0.020706234499812126,
+        "final_heading_rad": 0.007649471051990986,
+        "max_abs_heading_rad": 0.06270892173051834,
+        "world_displacement_xy_m": [
+          -1.6533297300338745,
+          -0.1108320951461792
+        ],
+        "peak_swing_lift_above_stance_m": [
+          0.03489583730697632,
+          0.016579844057559967
+        ],
+        "steady_mean_velocity": [
+          -0.08240574598312378,
+          -0.002101300982758403,
+          -0.00016864125791471452
+        ]
+      },
+      "checks": {
+        "survived_full_trial": true,
+        "speed_along_command_0_08_to_0_12_m_s": true,
+        "cycle_xy_rmse_at_most_0_04_m_s": true,
+        "cycle_yaw_mae_at_most_0_06_rad_s": true,
+        "distance_80_to_120_percent_of_target": true,
+        "net_lateral_at_most_0_15_m": true,
+        "final_heading_at_most_0_12_rad": true,
+        "max_heading_at_most_0_15_rad": true,
+        "both_feet_at_least_3_stable_landings": true,
+        "both_feet_lift_at_least_10_mm": true
+      },
+      "accepted": true
+    },
+    {
+      "xy_rmse_m_s": 0.17528219521045685,
+      "yaw_mae_rad_s": 0.13406406342983246,
+      "mean_velocity": [
+        -0.0852162092924118,
+        -0.004439314361661673,
+        0.005117845255881548
+      ],
+      "displacement_xy_m": [
+        -1.7282160520553589,
+        -0.14558196067810059
+      ],
+      "mean_height_m": 0.17417879402637482,
+      "head_joint_velocity_rms_rad_s": [
+        0.36233094334602356,
+        0.40513813495635986,
+        0.47550249099731445,
+        0.6827152371406555
+      ],
+      "mean_torque_saturation": 7.142857793951407e-05,
+      "mean_action_clipping": 0.0,
+      "command": "backward",
+      "trial": 3,
+      "survived": true,
+      "survival_s": 20.0,
+      "foot_landings": [
+        102.0,
+        63.0
+      ],
+      "stable_foot_landings": [
+        39.0,
+        37.0
+      ],
+      "metrics": {
+        "cycle_period_s": 0.54,
+        "cycle_xy_rmse_m_s": 0.018093129619956017,
+        "cycle_yaw_mae_rad_s": 0.015043159015476704,
+        "final_heading_rad": 0.013625867664813995,
+        "max_abs_heading_rad": 0.05562873184680939,
+        "world_displacement_xy_m": [
+          -1.7284859418869019,
+          -0.145859956741333
+        ],
+        "peak_swing_lift_above_stance_m": [
+          0.0333743542432785,
+          0.015934497117996216
+        ],
+        "steady_mean_velocity": [
+          -0.0872671827673912,
+          -0.003857047064229846,
+          0.0033354393672198057
+        ]
+      },
+      "checks": {
+        "survived_full_trial": true,
+        "speed_along_command_0_08_to_0_12_m_s": true,
+        "cycle_xy_rmse_at_most_0_04_m_s": true,
+        "cycle_yaw_mae_at_most_0_06_rad_s": true,
+        "distance_80_to_120_percent_of_target": true,
+        "net_lateral_at_most_0_15_m": true,
+        "final_heading_at_most_0_12_rad": true,
+        "max_heading_at_most_0_15_rad": true,
+        "both_feet_at_least_3_stable_landings": true,
+        "both_feet_lift_at_least_10_mm": true
+      },
+      "accepted": true
+    },
+    {
+      "xy_rmse_m_s": 0.17580929398536682,
+      "yaw_mae_rad_s": 0.13691949844360352,
+      "mean_velocity": [
+        -0.0853823721408844,
+        -0.004799696151167154,
+        0.0036450205370783806
+      ],
+      "displacement_xy_m": [
+        -1.7338013648986816,
+        -0.14919233322143555
+      ],
+      "mean_height_m": 0.17420537769794464,
+      "head_joint_velocity_rms_rad_s": [
+        0.3731131851673126,
+        0.392328679561615,
+        0.4726736545562744,
+        0.6751464605331421
+      ],
+      "mean_torque_saturation": 0.0002857143117580563,
+      "mean_action_clipping": 0.0,
+      "command": "backward",
+      "trial": 4,
+      "survived": true,
+      "survival_s": 20.0,
+      "foot_landings": [
+        96.0,
+        63.0
+      ],
+      "stable_foot_landings": [
+        39.0,
+        37.0
+      ],
+      "metrics": {
+        "cycle_period_s": 0.54,
+        "cycle_xy_rmse_m_s": 0.017726656049489975,
+        "cycle_yaw_mae_rad_s": 0.018641075119376183,
+        "final_heading_rad": 0.025174250826239586,
+        "max_abs_heading_rad": 0.05159559100866318,
+        "world_displacement_xy_m": [
+          -1.7341783046722412,
+          -0.14943087100982666
+        ],
+        "peak_swing_lift_above_stance_m": [
+          0.03260232135653496,
+          0.016487281769514084
+        ],
+        "steady_mean_velocity": [
+          -0.08732207864522934,
+          -0.0035997345112264156,
+          0.0019678082317113876
+        ]
+      },
+      "checks": {
+        "survived_full_trial": true,
+        "speed_along_command_0_08_to_0_12_m_s": true,
+        "cycle_xy_rmse_at_most_0_04_m_s": true,
+        "cycle_yaw_mae_at_most_0_06_rad_s": true,
+        "distance_80_to_120_percent_of_target": true,
+        "net_lateral_at_most_0_15_m": true,
+        "final_heading_at_most_0_12_rad": true,
+        "max_heading_at_most_0_15_rad": true,
+        "both_feet_at_least_3_stable_landings": true,
+        "both_feet_lift_at_least_10_mm": true
+      },
+      "accepted": true
+    },
+    {
+      "xy_rmse_m_s": 0.17495709657669067,
+      "yaw_mae_rad_s": 0.13913241028785706,
+      "mean_velocity": [
+        -0.08488085120916367,
+        -0.004490175284445286,
+        0.003022941527888179
+      ],
+      "displacement_xy_m": [
+        -1.7271208763122559,
+        -0.13794171810150146
+      ],
+      "mean_height_m": 0.17426089942455292,
+      "head_joint_velocity_rms_rad_s": [
+        0.37154528498649597,
+        0.4007723331451416,
+        0.4724990129470825,
+        0.6747066974639893
+      ],
+      "mean_torque_saturation": 0.0005714286235161126,
+      "mean_action_clipping": 0.0,
+      "command": "backward",
+      "trial": 5,
+      "survived": true,
+      "survival_s": 20.0,
+      "foot_landings": [
+        95.0,
+        58.0
+      ],
+      "stable_foot_landings": [
+        39.0,
+        37.0
+      ],
+      "metrics": {
+        "cycle_period_s": 0.54,
+        "cycle_xy_rmse_m_s": 0.01888640783727169,
+        "cycle_yaw_mae_rad_s": 0.01848462224006653,
+        "final_heading_rad": 0.025852495804429054,
+        "max_abs_heading_rad": 0.06446553021669388,
+        "world_displacement_xy_m": [
+          -1.727335810661316,
+          -0.13814473152160645
+        ],
+        "peak_swing_lift_above_stance_m": [
+          0.03338507562875748,
+          0.01683143526315689
+        ],
+        "steady_mean_velocity": [
+          -0.08675013482570648,
+          -0.0031272589694708586,
+          0.0020817359909415245
+        ]
+      },
+      "checks": {
+        "survived_full_trial": true,
+        "speed_along_command_0_08_to_0_12_m_s": true,
+        "cycle_xy_rmse_at_most_0_04_m_s": true,
+        "cycle_yaw_mae_at_most_0_06_rad_s": true,
+        "distance_80_to_120_percent_of_target": true,
+        "net_lateral_at_most_0_15_m": true,
+        "final_heading_at_most_0_12_rad": true,
+        "max_heading_at_most_0_15_rad": true,
+        "both_feet_at_least_3_stable_landings": true,
+        "both_feet_lift_at_least_10_mm": true
+      },
+      "accepted": true
+    },
+    {
+      "xy_rmse_m_s": 0.1757563203573227,
+      "yaw_mae_rad_s": 0.1276952475309372,
+      "mean_velocity": [
+        -0.08420921117067337,
+        -0.0036041331477463245,
+        0.0015942997997626662
+      ],
+      "displacement_xy_m": [
+        -1.7089557647705078,
+        -0.12793338298797607
+      ],
+      "mean_height_m": 0.17429131269454956,
+      "head_joint_velocity_rms_rad_s": [
+        0.36577507853507996,
+        0.3976958096027374,
+        0.4797285497188568,
+        0.6724701523780823
+      ],
+      "mean_torque_saturation": 0.0002142857265425846,
+      "mean_action_clipping": 0.0,
+      "command": "backward",
+      "trial": 6,
+      "survived": true,
+      "survival_s": 20.0,
+      "foot_landings": [
+        91.0,
+        58.0
+      ],
+      "stable_foot_landings": [
+        40.0,
+        37.0
+      ],
+      "metrics": {
+        "cycle_period_s": 0.54,
+        "cycle_xy_rmse_m_s": 0.017897218465805054,
+        "cycle_yaw_mae_rad_s": 0.018711185082793236,
+        "final_heading_rad": 0.0006903316825628281,
+        "max_abs_heading_rad": 0.06305770576000214,
+        "world_displacement_xy_m": [
+          -1.7093358039855957,
+          -0.12823700904846191
+        ],
+        "peak_swing_lift_above_stance_m": [
+          0.03270402550697327,
+          0.01725616306066513
+        ],
+        "steady_mean_velocity": [
+          -0.08664324134588242,
+          -0.002193515421822667,
+          -0.0006557794404216111
+        ]
+      },
+      "checks": {
+        "survived_full_trial": true,
+        "speed_along_command_0_08_to_0_12_m_s": true,
+        "cycle_xy_rmse_at_most_0_04_m_s": true,
+        "cycle_yaw_mae_at_most_0_06_rad_s": true,
+        "distance_80_to_120_percent_of_target": true,
+        "net_lateral_at_most_0_15_m": true,
+        "final_heading_at_most_0_12_rad": true,
+        "max_heading_at_most_0_15_rad": true,
+        "both_feet_at_least_3_stable_landings": true,
+        "both_feet_lift_at_least_10_mm": true
+      },
+      "accepted": true
+    },
+    {
+      "xy_rmse_m_s": 0.174575075507164,
+      "yaw_mae_rad_s": 0.14378374814987183,
+      "mean_velocity": [
+        -0.08398555964231491,
+        -0.004336575046181679,
+        -0.0002580282452981919
+      ],
+      "displacement_xy_m": [
+        -1.7165179252624512,
+        -0.1312631368637085
+      ],
+      "mean_height_m": 0.17410717904567719,
+      "head_joint_velocity_rms_rad_s": [
+        0.3548567593097687,
+        0.3962969481945038,
+        0.4866042733192444,
+        0.6764276623725891
+      ],
+      "mean_torque_saturation": 0.0005714286235161126,
+      "mean_action_clipping": 0.0,
+      "command": "backward",
+      "trial": 7,
+      "survived": true,
+      "survival_s": 20.0,
+      "foot_landings": [
+        102.0,
+        68.0
+      ],
+      "stable_foot_landings": [
+        38.0,
+        37.0
+      ],
+      "metrics": {
+        "cycle_period_s": 0.54,
+        "cycle_xy_rmse_m_s": 0.019857829436659813,
+        "cycle_yaw_mae_rad_s": 0.025563107803463936,
+        "final_heading_rad": 0.022572601214051247,
+        "max_abs_heading_rad": 0.052750829607248306,
+        "world_displacement_xy_m": [
+          -1.716848373413086,
+          -0.13158035278320312
+        ],
+        "peak_swing_lift_above_stance_m": [
+          0.034369297325611115,
+          0.016003400087356567
+        ],
+        "steady_mean_velocity": [
+          -0.08521789312362671,
+          -0.0029916453640908003,
+          -0.0022093788720667362
+        ]
+      },
+      "checks": {
+        "survived_full_trial": true,
+        "speed_along_command_0_08_to_0_12_m_s": true,
+        "cycle_xy_rmse_at_most_0_04_m_s": true,
+        "cycle_yaw_mae_at_most_0_06_rad_s": true,
+        "distance_80_to_120_percent_of_target": true,
+        "net_lateral_at_most_0_15_m": true,
+        "final_heading_at_most_0_12_rad": true,
+        "max_heading_at_most_0_15_rad": true,
+        "both_feet_at_least_3_stable_landings": true,
+        "both_feet_lift_at_least_10_mm": true
+      },
+      "accepted": true
+    }
+  ]
+}

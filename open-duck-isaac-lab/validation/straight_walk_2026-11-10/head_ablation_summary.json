@@ -1,0 +1,77 @@
+{
+  "scope": "Same official actor and full v2 mass, same seed43, 8 trials per command, 20s maximum. Only head control mode differs. These are diagnostics, not final retrained policy evaluations.",
+  "mass_kg": 2.107140705,
+  "head_chain_mass_kg": 0.5815347,
+  "head_fraction": 0.27598285136824785,
+  "comparisons": {
+    "teacher_full": {
+      "head_control_mode": "policy",
+      "summary": {
+        "stand": {
+          "survival_rate": 1.0,
+          "mean_survival_s": 20.0,
+          "xy_rmse_m_s": 0.01018096343614161,
+          "yaw_mae_rad_s": 0.007282234728336334,
+          "mean_velocity": [
+            0.0008088761042017723,
+            0.0004860820044996217,
+            0.004312556120567024
+          ]
+        },
+        "forward": {
+          "survival_rate": 1.0,
+          "mean_survival_s": 20.0,
+          "xy_rmse_m_s": 0.13688642717897892,
+          "yaw_mae_rad_s": 0.10553508810698986,
+          "mean_velocity": [
+            0.083260677754879,
+            0.02231196640059352,
+            -0.008135119918733835
+          ]
+        }
+      },
+      "forward_head_joint_rms_rad_s": [
+        0.15506039559841156,
+        0.9975792765617371,
+        0.9534347653388977,
+        0.7698786854743958
+      ],
+      "evaluation": "/home/happy/openduck_ws/open-duck-isaac-lab/validation/straight_walk_2026-11-10/teacher_full/evaluation.json"
+    },
+    "teacher_head_hold": {
+      "head_control_mode": "command",
+      "summary": {
+        "stand": {
+          "survival_rate": 0.0,
+          "mean_survival_s": 6.4,
+          "xy_rmse_m_s": 0.15530338138341904,
+          "yaw_mae_rad_s": 0.2055814228951931,
+          "mean_velocity": [
+            -0.01847349590389058,
+            -0.022287444211542606,
+            -0.022448226052802056
+          ]
+        },
+        "forward": {
+          "survival_rate": 0.0,
+          "mean_survival_s": 7.9325,
+          "xy_rmse_m_s": 0.155281450599432,
+          "yaw_mae_rad_s": 0.30866217613220215,
+          "mean_velocity": [
+            0.03832559223519638,
+            -0.015953795751556754,
+            -0.012678280254476704
+          ]
+        }
+      },
+      "forward_head_joint_rms_rad_s": [
+        0.0964399129152298,
+        0.035743337124586105,
+        0.02641165256500244,
+        0.013359802775084972
+      ],
+      "evaluation": "/home/happy/openduck_ws/open-duck-isaac-lab/validation/straight_walk_2026-11-10/teacher_head_hold/evaluation.json"
+    }
+  },
+  "interpretation": "The large head participates in balance. Locking all four neck/head joints destabilizes the imported expert. This does not prove the head is the sole source of drift; the legacy reward also rewarded speed without requiring correct direction or stopping. The retrained controller retains head motion with a target-rate limit and unchanged CAD mass/inertia."
+}

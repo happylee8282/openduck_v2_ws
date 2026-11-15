@@ -1,0 +1,48 @@
+{
+  "status": "validated_nominal_flat_straight_stop",
+  "checkpoint": "/home/happy/openduck_ws/open-duck-isaac-lab/policies/flat_straight_v2.pt",
+  "sha256": "8ed31af1c07788fe1c4612af80e04bc1027163fd8b8bc05468a18111d113d284",
+  "source_checkpoint": "/home/happy/openduck_ws/open-duck-isaac-lab/logs/rsl_rl/open_duck_v2_straight/2026-11-10_02-41-01_aligned_gait_heading_v6/model_100.pt",
+  "source_neural_iteration": 100,
+  "new_transitions_in_selected_neural_lineage": 3309568,
+  "critic_warmup_updates": 40,
+  "actor_gradient_updates": 61,
+  "completed_training_iterations": 600,
+  "completed_run_transitions": 19660800,
+  "selection_note": "Selected iteration100 by independent replay; later raw checkpoints were not substituted. IMU heading hold and forward scale are explicit post-training command processing with unchanged neural weights.",
+  "nominal": "candidate_seed44",
+  "transition": "candidate_seed44",
+  "calibration43": "v6_100_calibrated",
+  "run_dir": "logs/rsl_rl/open_duck_v2_straight/2026-11-10_02-41-01_aligned_gait_heading_v6",
+  "control_profile": {
+    "head_control_mode": "stabilized",
+    "target_filter_tau_s": 0.0,
+    "head_target_speed": 1.0,
+    "reward_profile": "straight_v6",
+    "heading_hold_kp": 2.0,
+    "heading_hold_max_rate": 0.35,
+    "heading_hold_filter_tau": 0.25,
+    "forward_command_scale": 0.85,
+    "lateral_command_trim": 0.0
+  },
+  "official_initialization": {
+    "type": "official_onnx_import",
+    "source": "/home/happy/Documents/Codex/2026-10-28/https-github-com-apirrone-open-duck/outputs/Open_Duck/Open_Duck_Mini/BEST_WALK_ONNX_2.onnx",
+    "sha256": "3c606f9381a1710cc8fecdb7442787dcbfce3ee9bc02a6f1224774ab2b3a1067",
+    "repository": "apirrone/Open_Duck_Mini",
+    "commit": "b23317a485b3cec7d8417f352478778b3475173c",
+    "phase_period_source": "Official Runtime polynomial data: period=0.54s, fps=50; read via pickletools without unpickling"
+  },
+  "hardware_tested": false,
+  "stress": "stress",
+  "transition_video": "final_video",
+  "video_evaluation": "final_video/evaluation.json",
+  "video_assessment": "final_video/assessment.json",
+  "nominal_trials_passed": 48,
+  "nominal_trials_total": 48,
+  "stress_acceptance": {
+    "stand": "8/8",
+    "forward": "5/8",
+    "stop_go_stop": "5/8"
+  }
+}

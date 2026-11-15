@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "steps": 128,
+  "falls": 3,
+  "checkpoint": "/home/happy/Documents/Codex/2026-10-28/https-github-com-apirrone-open-duck/outputs/Open_Duck/open-duck-isaac-lab/logs/rsl_rl/open_duck_v2_101_velocity/2026-11-04_12-46-59_v2_validation/model_2.pt",
+  "note": "Bounded playback smoke, not policy quality certification"
+}

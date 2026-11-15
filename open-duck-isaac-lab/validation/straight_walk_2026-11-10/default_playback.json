@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "steps": 128,
+  "falls": 0,
+  "checkpoint": "/home/happy/openduck_ws/open-duck-isaac-lab/policies/flat_straight_v2.pt",
+  "note": "Bounded playback smoke, not policy quality certification"
+}

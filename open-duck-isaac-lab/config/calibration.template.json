@@ -1,0 +1,36 @@
+{
+  "source": "unmeasured_template",
+  "measured_mass_kg": null,
+  "measured_supply_v": null,
+  "command_latency_p95_s": null,
+  "imu_latency_p95_s": null,
+  "joint_zero_offsets_rad": {
+    "left_hip_yaw": null,
+    "left_hip_roll": null,
+    "left_hip_pitch": null,
+    "left_knee": null,
+    "left_ankle": null,
+    "neck_pitch": null,
+    "head_pitch": null,
+    "head_yaw": null,
+    "head_roll": null,
+    "right_hip_yaw": null,
+    "right_hip_roll": null,
+    "right_hip_pitch": null,
+    "right_knee": null,
+    "right_ankle": null
+  },
+  "motor_order_verified": false,
+  "joint_signs_verified": false,
+  "imu_axes_verified": false,
+  "feet_left_right_verified": false,
+  "servo_fit": {
+    "effort_nm": null,
+    "kp": null,
+    "damping_nm_s": null,
+    "coulomb_friction_nm": null,
+    "armature_kg_m2": null,
+    "max_speed_rad_s": null
+  },
+  "measurement_log_sha256": null
+}

@@ -1,0 +1,6 @@
+{
+  "reason": "V3 raw rate/speed improved but 20s world heading/path drift remained. V4 uses world heading derivative and accumulated heading/path rewards; head mass/geometry unchanged.",
+  "warm_start": "/home/happy/openduck_ws/open-duck-isaac-lab/logs/rsl_rl/open_duck_v2_straight/2026-11-10_02-09-28_expert_neck_balanced_v3/model_300.pt",
+  "new_actor_inputs": false,
+  "nominal_training": true
+}

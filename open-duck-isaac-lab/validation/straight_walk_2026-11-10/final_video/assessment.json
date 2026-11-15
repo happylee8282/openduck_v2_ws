@@ -1,0 +1,142 @@
+{
+  "checkpoint": "/home/happy/openduck_ws/open-duck-isaac-lab/policies/flat_straight_v2.pt",
+  "source_evaluation": "/home/happy/openduck_ws/open-duck-isaac-lab/validation/straight_walk_2026-11-10/final_video/evaluation.json",
+  "criteria_note": "Declared engineering targets for this experiment. Cycle-averaged errors exclude the first 2 s; raw errors remain in each trial. World displacement and heading independently catch slow drift. Each trial must meet every listed check; each command needs >=90% accepted trials. No post-fall samples or respawns count.",
+  "head_control_mode": "stabilized",
+  "controller": {
+    "heading_hold_kp": 2.0,
+    "heading_hold_max_rate": 0.35,
+    "heading_hold_filter_tau": 0.25,
+    "forward_command_scale": 0.85,
+    "lateral_command_trim": 0.0,
+    "heading_sensor": "virtual trunk IMU attitude; ideal nominal, biased/noisy/delayed when randomized"
+  },
+  "randomized": false,
+  "seed": 43,
+  "accepted": true,
+  "summary": {
+    "stop_go_stop": {
+      "trials": 1,
+      "survived": 1,
+      "accepted": 1,
+      "acceptance_rate": 1.0,
+      "mean_world_displacement_xy_m": [
+        1.2364271879196167,
+        0.009300244972109795
+      ],
+      "mean_final_heading_rad": 0.018220506608486176,
+      "mean_cycle_xy_rmse_m_s": 0.02135487087070942,
+      "mean_cycle_yaw_mae_rad_s": 0.026161622256040573
+    }
+  },
+  "trials": [
+    {
+      "xy_rmse_m_s": 0.10437996685504913,
+      "yaw_mae_rad_s": 0.10348048061132431,
+      "mean_velocity": [
+        0.061871979385614395,
+        0.0024695098400115967,
+        -0.003001845208927989
+      ],
+      "displacement_xy_m": [
+        1.2366764545440674,
+        0.009377104230225086
+      ],
+      "mean_height_m": 0.16701669991016388,
+      "head_joint_velocity_rms_rad_s": [
+        0.1671331822872162,
+        0.6269642114639282,
+        0.6634534001350403,
+        0.5200057625770569
+      ],
+      "mean_torque_saturation": 0.0,
+      "mean_action_clipping": 0.0,
+      "command": "stop_go_stop",
+      "trial": 0,
+      "survived": true,
+      "survival_s": 20.0,
+      "foot_landings": [
+        52.0,
+        46.0
+      ],
+      "stable_foot_landings": [
+        24.0,
+        23.0
+      ],
+      "metrics": {
+        "cycle_period_s": 0.54,
+        "cycle_xy_rmse_m_s": 0.02135487087070942,
+        "cycle_yaw_mae_rad_s": 0.026161622256040573,
+        "final_heading_rad": 0.018220506608486176,
+        "max_abs_heading_rad": 0.07480186223983765,
+        "world_displacement_xy_m": [
+          1.2364271879196167,
+          0.009300244972109795
+        ],
+        "peak_swing_lift_above_stance_m": [
+          0.023894283920526505,
+          0.014360260218381882
+        ],
+        "phases": {
+          "initial_stop": {
+            "samples": 100,
+            "mean_velocity": [
+              0.0008025015704333782,
+              0.00024109421065077186,
+              0.006300816312432289
+            ],
+            "planar_speed_mean_m_s": 0.000839830026961863,
+            "displacement_xy_m": [
+              0.00014888867735862732,
+              8.658971637487411e-05
+            ],
+            "cycle_xy_rmse_m_s": 0.000765630800742656,
+            "cycle_yaw_mae_rad_s": 0.006265415344387293
+          },
+          "forward": {
+            "samples": 500,
+            "mean_velocity": [
+              0.10820098966360092,
+              0.004535396117717028,
+              -0.011424891650676727
+            ],
+            "planar_speed_mean_m_s": 0.16817566752433777,
+            "displacement_xy_m": [
+              1.0801928043365479,
+              0.008092080242931843
+            ],
+            "cycle_xy_rmse_m_s": 0.010615315288305283,
+            "cycle_yaw_mae_rad_s": 0.023036818951368332
+          },
+          "final_stop": {
+            "samples": 151,
+            "mean_velocity": [
+              0.0005265158833935857,
+              2.3810025595594198e-05,
+              0.00390174170024693
+            ],
+            "planar_speed_mean_m_s": 0.0005445657297968864,
+            "displacement_xy_m": [
+              -1.5020370483398438e-05,
+              -2.896040678024292e-05
+            ],
+            "cycle_xy_rmse_m_s": 0.0005285874358378351,
+            "cycle_yaw_mae_rad_s": 0.003879846539348364
+          }
+        }
+      },
+      "checks": {
+        "survived_full_trial": true,
+        "initial_stop_planar_speed_at_most_0_015_m_s": true,
+        "initial_stop_net_drift_at_most_0_03_m": true,
+        "final_stop_planar_speed_at_most_0_015_m_s": true,
+        "final_stop_net_drift_at_most_0_03_m": true,
+        "forward_mean_0_08_to_0_12_m_s": true,
+        "forward_cycle_xy_rmse_at_most_0_04_m_s": true,
+        "max_heading_at_most_0_15_rad": true,
+        "net_lateral_at_most_0_15_m": true
+      },
+      "accepted": true
+    }
+  ]
+}

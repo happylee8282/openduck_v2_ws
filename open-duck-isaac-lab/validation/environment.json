@@ -1,0 +1,16 @@
+{
+  "validated_date": "2026-11-04",
+  "python": "3.11.14 (main, Oct 21 2025, 18:31:21) [GCC 11.2.0]",
+  "platform": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "isaaclab_version": "2.2.0",
+  "gpu": "NVIDIA GeForce RTX 5070, 580.178.04, 12227 MiB",
+  "packages": {
+    "numpy": "1.26.4",
+    "torch": "2.7.0+cu128",
+    "isaacsim": "5.0.0.0",
+    "rsl-rl-lib": "2.3.3",
+    "gymnasium": "1.2.0",
+    "warp-lang": "1.11.0",
+    "onnx": "1.20.0"
+  }
+}

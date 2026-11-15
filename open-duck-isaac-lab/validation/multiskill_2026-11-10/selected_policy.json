@@ -1,0 +1,81 @@
+{
+  "status": "validated_nominal_isaac_lab",
+  "skills": {
+    "forward": {
+      "checkpoint": "policies/flat_straight_v2.pt",
+      "sha256": "8ed31af1c07788fe1c4612af80e04bc1027163fd8b8bc05468a18111d113d284"
+    },
+    "backward": {
+      "checkpoint": "policies/backward_v2.pt",
+      "sha256": "45520602afb003d097b5c7aff178cb87b1d0125825d317b2dc14c687d0dc70ae"
+    },
+    "posture": {
+      "checkpoint": "policies/posture_v2.pt",
+      "sha256": "0d65497d27236e745d4702cc4266ec69faa5de340bed8b429f5040fc0c772eb9"
+    }
+  },
+  "posture_reference": {
+    "path": "config/posture_reference_v1.json",
+    "sha256": "9883711af399320ae628c5fd638b773600fab227ef4a1f581a14d0cdf9b4c79c"
+  },
+  "controller": {
+    "backward_command_gain": 0.55,
+    "backward_lateral_trim_m_s": 0.006,
+    "heading_hold_kp": 2.0,
+    "backward_stop_crossfade_s": 1.0,
+    "direction_change_stop_s": 1.0,
+    "posture_ramp_s": 4.0,
+    "posture_stand_quiet_s": 1.0
+  },
+  "validation_scope": "Nominal full-mass v2 flat ground in Isaac Lab. Hardware and domain randomized validation not completed.",
+  "validation": {
+    "benchmark_trials": 80,
+    "benchmark_passed": 80,
+    "seeds": [
+      62,
+      63
+    ],
+    "cases": {
+      "stand": 20,
+      "forward": 20,
+      "backward": 20,
+      "posture": 48,
+      "demo": 52
+    },
+    "assessment_paths": [
+      "validation/multiskill_2026-11-10/smooth_seed62/assessment.json",
+      "validation/multiskill_2026-11-10/smooth_seed63/assessment.json"
+    ],
+    "video_assessment": "validation/multiskill_2026-11-10/video_demo/assessment.json",
+    "video_passed": true,
+    "cpu_regression_tests": 47,
+    "actor_export_parity": "validation/multiskill_2026-11-10/exports/export_validation.json",
+    "hardware_validated": false,
+    "domain_randomized_new_skills_validated": false
+  },
+  "training": {
+    "backward": {
+      "source_checkpoint": "logs/rsl_rl/open_duck_v2_backward/2026-11-10_04-25-43_backward_v1/model_100.pt",
+      "selected_iteration": 100,
+      "selected_rollout_samples": 1654784,
+      "actor_warmup_updates": 40
+    },
+    "posture": {
+      "source_checkpoint": "logs/rsl_rl/open_duck_v2_posture/2026-11-10_04-33-25_posture_residual_v1/model_50.pt",
+      "selected_iteration": 50,
+      "selected_rollout_samples": 417792,
+      "reference_ik_plus_rl_residual": true
+    },
+    "forward": "frozen original checkpoint; no weight changes"
+  },
+  "repository": "https://github.com/zhangzijie-pro/open-duck-isaac-lab",
+  "base_revision": "2e85abe5f22b61e9e121f74f91823a814e02734b",
+  "source_hashes": {
+    "open_duck_v2/multiskill.py": "720aacf7f8c81b03945b8186c85ecdedf57c9311579bace4b6d11a70b73bea9e",
+    "open_duck_v2/posture.py": "394d6f2bae2f7b267140188e58f1c7e9e26e86374a52d14c4c01a6081ef11ce9",
+    "open_duck_complex_terrain/posture_env.py": "13489afabf6aeaeba3055c7690736e1244f2d4926b0e1e57840902005c26c457",
+    "tools/evaluate_multiskill.py": "f886e15a4b968837d071b926683485c5cd108fc6a7d05b63cc76718dd9b4903d",
+    "tools/assess_multiskill.py": "5385912416a8f6a57cf6ab9e6be32728077f96931ad3cffddc9627faa08fe4e8"
+  },
+  "source_change_after_rollout": "Only the evaluator default bundle path was changed to the selected manifest; explicit bundle arguments were used for all recorded evaluations."
+}

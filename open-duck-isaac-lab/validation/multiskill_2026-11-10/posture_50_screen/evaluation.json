@@ -1,0 +1,116 @@
+{
+  "status": "completed",
+  "bundle": "/home/happy/openduck_ws/open-duck-isaac-lab/config/multiskill.candidate.json",
+  "seed": 62,
+  "randomized": false,
+  "duration_s": 16.0,
+  "dt": 0.02,
+  "reference_sha256": "9883711af399320ae628c5fd638b773600fab227ef4a1f581a14d0cdf9b4c79c",
+  "total_mass_mean_kg": 2.1071407794952393,
+  "no_resets_after_initialization": true,
+  "base_pose_not_overwritten": true,
+  "trials": [
+    {
+      "command": "posture",
+      "trial": 0,
+      "duration_s": 16.0,
+      "survived": true,
+      "survival_s": 16.0,
+      "stable_foot_landings": [
+        1.0,
+        1.0
+      ],
+      "mean_velocity": [
+        0.0008743958896957338,
+        0.0005398338544182479,
+        0.003494469216093421
+      ],
+      "xy_rmse_m_s": 0.0169842392206192,
+      "yaw_mae_rad_s": 0.012108865194022655,
+      "displacement_xy_m": [
+        0.009325981140136719,
+        0.009560108184814453
+      ],
+      "mean_height_m": 0.1481194943189621,
+      "mean_torque_saturation": 0.0
+    },
+    {
+      "command": "posture",
+      "trial": 1,
+      "duration_s": 16.0,
+      "survived": true,
+      "survival_s": 16.0,
+      "stable_foot_landings": [
+        1.0,
+        1.0
+      ],
+      "mean_velocity": [
+        0.0007804384222254157,
+        0.0008701307815499604,
+        0.0011523119173943996
+      ],
+      "xy_rmse_m_s": 0.017321744933724403,
+      "yaw_mae_rad_s": 0.012147814966738224,
+      "displacement_xy_m": [
+        0.009388923645019531,
+        0.01085662841796875
+      ],
+      "mean_height_m": 0.1480575054883957,
+      "mean_torque_saturation": 0.0
+    },
+    {
+      "command": "posture",
+      "trial": 2,
+      "duration_s": 16.0,
+      "survived": true,
+      "survival_s": 16.0,
+      "stable_foot_landings": [
+        1.0,
+        1.0
+      ],
+      "mean_velocity": [
+        0.0010679292026907206,
+        0.0004951011505909264,
+        0.002533663995563984
+      ],
+      "xy_rmse_m_s": 0.016954701393842697,
+      "yaw_mae_rad_s": 0.01252470351755619,
+      "displacement_xy_m": [
+        0.012006640434265137,
+        0.007598519325256348
+      ],
+      "mean_height_m": 0.14839275181293488,
+      "mean_torque_saturation": 0.0
+    },
+    {
+      "command": "posture",
+      "trial": 3,
+      "duration_s": 16.0,
+      "survived": true,
+      "survival_s": 16.0,
+      "stable_foot_landings": [
+        1.0,
+        1.0
+      ],
+      "mean_velocity": [
+        0.0008573667728342116,
+        0.000718814495485276,
+        0.003278128569945693
+      ],
+      "xy_rmse_m_s": 0.018802063539624214,
+      "yaw_mae_rad_s": 0.014596345834434032,
+      "displacement_xy_m": [
+        0.010843992233276367,
+        0.011873006820678711
+      ],
+      "mean_height_m": 0.1478051394224167,
+      "mean_torque_saturation": 0.0
+    }
+  ],
+  "forward_sha256": "8ed31af1c07788fe1c4612af80e04bc1027163fd8b8bc05468a18111d113d284",
+  "checkpoints": {
+    "forward": "/home/happy/openduck_ws/open-duck-isaac-lab/policies/flat_straight_v2.pt",
+    "backward": "/home/happy/openduck_ws/open-duck-isaac-lab/validation/multiskill_2026-11-10/backward_100_calibrated.pt",
+    "posture": "/home/happy/openduck_ws/open-duck-isaac-lab/logs/rsl_rl/open_duck_v2_posture/2026-11-10_04-33-25_posture_residual_v1/model_50.pt"
+  }
+}

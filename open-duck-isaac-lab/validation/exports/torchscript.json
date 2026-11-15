@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "max_abs_error": 0.0,
+  "checkpoint": "outputs/Open_Duck/open-duck-isaac-lab/logs/rsl_rl/open_duck_v2_101_velocity/2026-11-04_12-46-59_v2_validation/model_2.pt",
+  "training_iterations": 3,
+  "purpose": "pipeline validation, not a deployment-ready walking policy"
+}

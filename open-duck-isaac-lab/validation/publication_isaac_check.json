@@ -1,0 +1,27 @@
+{
+  "validation": "actual Isaac Sim / USD / PhysX",
+  "status": "passed",
+  "policy_performance": "not_run",
+  "hardware_walk": "not_run",
+  "versions": {
+    "torch": "2.7.0+cu128",
+    "isaacsim": "5.0.0.0",
+    "rsl-rl-lib": "2.3.3",
+    "gymnasium": "1.2.0"
+  },
+  "gpu": "NVIDIA GeForce RTX 5070, 580.178.04, 12227 MiB",
+  "stage": "completed",
+  "smoke_steps": 32,
+  "usd_mass_kg": 2.1071410179138184,
+  "task": "flat",
+  "policy_shape": [
+    1,
+    101
+  ],
+  "critic_shape": [
+    1,
+    222
+  ],
+  "randomization_resets": 1,
+  "note": "Smoke and readback passed; no learned policy or hardware performance claim"
+}

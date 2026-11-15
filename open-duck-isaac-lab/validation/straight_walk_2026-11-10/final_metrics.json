@@ -1,0 +1,22 @@
+{
+  "stand_steady_planar_speed_m_s": 0.0005374552129069343,
+  "transition_final_stop_planar_speed_m_s": 0.0006048187060514465,
+  "transition_final_stop_drift_m": 2.648867084029233e-05,
+  "forward_foot_lift_mean_m": [
+    0.022326273377984762,
+    0.01343278493732214
+  ],
+  "forward_max_heading_abs_rad": 0.08478789031505585,
+  "forward_net_lateral_minmax_m": [
+    -0.008884787559509277,
+    0.023918628692626953
+  ],
+  "head_joint_rms_rad_s": [
+    0.1955021135509014,
+    0.7781375497579575,
+    0.8454767242074013,
+    0.6555638909339905
+  ],
+  "mass_kg": 2.1071410179138184,
+  "head_mass_kg": 0.581534743309021
+}

@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "checkpoint": "/home/happy/openduck_ws/open-duck-isaac-lab/validation/straight_walk_2026-11-10/candidates/model_100_heading_calibrated.pt",
+  "sha256": "8ed31af1c07788fe1c4612af80e04bc1027163fd8b8bc05468a18111d113d284",
+  "source_rollout": "/home/happy/openduck_ws/open-duck-isaac-lab/validation/straight_walk_2026-11-10/v6_100_calibrated/rollout.npz",
+  "actual_simulator_input_samples": 2048,
+  "onnx_samples": 64,
+  "errors": {
+    "rsl_rl_max_abs_error": 0.0,
+    "recorded_sim_action_max_abs_error": 5.364418029785156e-07,
+    "torchscript_max_abs_error": 0.0,
+    "onnx_reference_max_abs_error": 3.5762786865234375e-07
+  },
+  "scope": "Actor output parity on actual simulator inputs. Heading command preprocessor and motor target processing remain required outside standalone actor exports.",
+  "control_profile": {
+    "head_control_mode": "stabilized",
+    "target_filter_tau_s": 0.0,
+    "head_target_speed": 1.0,
+    "reward_profile": "straight_v6",
+    "heading_hold_kp": 2.0,
+    "heading_hold_max_rate": 0.35,
+    "heading_hold_filter_tau": 0.25,
+    "forward_command_scale": 0.85,
+    "lateral_command_trim": 0.0
+  }
+}

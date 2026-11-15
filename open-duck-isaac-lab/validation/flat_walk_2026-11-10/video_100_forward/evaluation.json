@@ -1,0 +1,50 @@
+{
+  "status": "completed",
+  "checkpoint": "/home/happy/openduck_ws/open-duck-isaac-lab/logs/rsl_rl/open_duck_v2_101_velocity/2026-11-10_00-22-37_flat_seed42/model_100.pt",
+  "contract_hash": "f5fd6f541d73e4d0f550273ac6d6e1db24c29ec8b9f402f7e8e4373cafe47e50",
+  "seed": 43,
+  "randomized": false,
+  "duration_s": 20.0,
+  "dt": 0.02,
+  "trials_per_command": 1,
+  "summary": {
+    "forward": {
+      "survival_rate": 0.0,
+      "mean_survival_s": 2.36,
+      "xy_rmse_m_s": 0.10573115551551099,
+      "yaw_mae_rad_s": 0.5286511182785034,
+      "mean_velocity": [
+        0.05650502070784569,
+        -0.0033832741901278496,
+        0.22754372656345367
+      ]
+    }
+  },
+  "trials": [
+    {
+      "xy_rmse_m_s": 0.10573115551551099,
+      "yaw_mae_rad_s": 0.5286511182785034,
+      "mean_velocity": [
+        0.05650502070784569,
+        -0.0033832741901278496,
+        0.22754372656345367
+      ],
+      "displacement_xy_m": [
+        0.08301112800836563,
+        0.06247664988040924
+      ],
+      "mean_height_m": 0.15046386420726776,
+      "mean_torque_saturation": 0.24969476461410522,
+      "mean_action_clipping": 0.02747252956032753,
+      "command": "forward",
+      "trial": 0,
+      "survived": false,
+      "survival_s": 2.36,
+      "foot_landings": [
+        12.0,
+        19.0
+      ]
+    }
+  ],
+  "protocol": "Fixed commands, first episode only, no respawns; errors use samples before termination."
+}

@@ -1,0 +1,20 @@
+{
+  "source": "teacher_full/rollout.npz",
+  "period_s": 0.54,
+  "duty_factor": 0.58,
+  "offset_cycles_before": 0,
+  "offset_cycles_after": 0.25,
+  "actor_phase_clock_changed": false,
+  "feet": {
+    "left": {
+      "old_contact_agreement": 0.3625,
+      "aligned_contact_agreement": 0.7683333333333333,
+      "peak_height_phase_cycles": 0.5185185185185185
+    },
+    "right": {
+      "old_contact_agreement": 0.3333333333333333,
+      "aligned_contact_agreement": 0.8475,
+      "peak_height_phase_cycles": 0.0
+    }
+  }
+}

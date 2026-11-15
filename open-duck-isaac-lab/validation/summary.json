@@ -1,0 +1,170 @@
+{
+  "date": "2026-11-04",
+  "source_base": "2e85abe5f22b61e9e121f74f91823a814e02734b",
+  "branch": "fix/v2-sim2real",
+  "contract_hash": "f5fd6f541d73e4d0f550273ac6d6e1db24c29ec8b9f402f7e8e4373cafe47e50",
+  "cpu_regressions": {
+    "status": "passed",
+    "count": 22
+  },
+  "asset_validation": {
+    "urdf_sha256": "e8aa9c589671e6423f275cb584e019dbee1972c07a7d2cf9a16539689d58693d",
+    "mass_kg": 2.107140705,
+    "physical_links": 15,
+    "moving_joints": 14,
+    "mesh_files": 55,
+    "urdf_inertia_limits_meshes": "passed",
+    "isaac_usd_readback": "not_run",
+    "official_mjcf_fk_poses": 32,
+    "max_position_error_m": 1.1282932680101165e-06,
+    "max_rotation_error_rad": 1.1544479299881688e-05
+  },
+  "actual_physx": {
+    "flat": {
+      "validation": "actual Isaac Sim / USD / PhysX",
+      "status": "passed",
+      "policy_performance": "not_run",
+      "hardware_walk": "not_run",
+      "versions": {
+        "torch": "2.7.0+cu128",
+        "isaacsim": "5.0.0.0",
+        "rsl-rl-lib": "2.3.3",
+        "gymnasium": "1.2.0"
+      },
+      "gpu": "NVIDIA GeForce RTX 5070, 580.178.04, 12227 MiB",
+      "stage": "completed",
+      "smoke_steps": 250,
+      "usd_mass_kg": 2.1071410179138184,
+      "policy_shape": [
+        1,
+        101
+      ],
+      "critic_shape": [
+        1,
+        222
+      ],
+      "randomization_resets": 1,
+      "note": "Smoke and readback passed; no learned policy or hardware performance claim",
+      "task": "flat"
+    },
+    "rough": {
+      "validation": "actual Isaac Sim / USD / PhysX",
+      "status": "passed",
+      "policy_performance": "not_run",
+      "hardware_walk": "not_run",
+      "versions": {
+        "torch": "2.7.0+cu128",
+        "isaacsim": "5.0.0.0",
+        "rsl-rl-lib": "2.3.3",
+        "gymnasium": "1.2.0"
+      },
+      "gpu": "NVIDIA GeForce RTX 5070, 580.178.04, 12227 MiB",
+      "stage": "completed",
+      "smoke_steps": 64,
+      "usd_mass_kg": 2.1071410179138184,
+      "task": "rough",
+      "policy_shape": [
+        1,
+        101
+      ],
+      "critic_shape": [
+        1,
+        222
+      ],
+      "randomization_resets": 1,
+      "note": "Smoke and readback passed; no learned policy or hardware performance claim"
+    },
+    "imitation": {
+      "validation": "actual Isaac Sim / USD / PhysX",
+      "status": "passed",
+      "policy_performance": "not_run",
+      "hardware_walk": "not_run",
+      "versions": {
+        "torch": "2.7.0+cu128",
+        "isaacsim": "5.0.0.0",
+        "rsl-rl-lib": "2.3.3",
+        "gymnasium": "1.2.0"
+      },
+      "gpu": "NVIDIA GeForce RTX 5070, 580.178.04, 12227 MiB",
+      "stage": "completed",
+      "smoke_steps": 64,
+      "usd_mass_kg": 2.1071410179138184,
+      "task": "imitation",
+      "policy_shape": [
+        1,
+        101
+      ],
+      "critic_shape": [
+        1,
+        222
+      ],
+      "randomization_resets": 1,
+      "note": "Smoke and readback passed; no learned policy or hardware performance claim"
+    }
+  },
+  "ppo_smoke": {
+    "status": "passed",
+    "iterations": 3,
+    "num_envs": 32,
+    "samples": 9216,
+    "checkpoint_iteration": 2,
+    "purpose": "training pipeline check"
+  },
+  "playback": {
+    "status": "passed",
+    "steps": 128,
+    "falls": 3,
+    "checkpoint": "/home/happy/Documents/Codex/2026-10-28/https-github-com-apirrone-open-duck/outputs/Open_Duck/open-duck-isaac-lab/logs/rsl_rl/open_duck_v2_101_velocity/2026-11-04_12-46-59_v2_validation/model_2.pt",
+    "note": "Bounded playback smoke, not policy quality certification"
+  },
+  "torchscript": {
+    "status": "passed",
+    "max_abs_error": 0.0,
+    "checkpoint": "outputs/Open_Duck/open-duck-isaac-lab/logs/rsl_rl/open_duck_v2_101_velocity/2026-11-04_12-46-59_v2_validation/model_2.pt",
+    "training_iterations": 3,
+    "purpose": "pipeline validation, not a deployment-ready walking policy"
+  },
+  "onnx": {
+    "status": "passed",
+    "batch": 32,
+    "max_abs_error": 1.341104507446289e-07,
+    "input_shape": [
+      32,
+      101
+    ],
+    "output_shape": [
+      32,
+      14
+    ]
+  },
+  "hardware_calibration": {
+    "status": "incomplete",
+    "issues": [
+      "source must be measured_hardware",
+      "measured_mass_kg requires a finite positive measurement",
+      "measured_supply_v requires a finite positive measurement",
+      "command_latency_p95_s requires a finite positive measurement",
+      "imu_latency_p95_s requires a finite positive measurement",
+      "all 14 named joint zero offsets must be measured",
+      "motor_order_verified must be verified on hardware",
+      "joint_signs_verified must be verified on hardware",
+      "imu_axes_verified must be verified on hardware",
+      "feet_left_right_verified must be verified on hardware",
+      "servo_fit.effort_nm requires a measured positive value",
+      "servo_fit.kp requires a measured positive value",
+      "servo_fit.damping_nm_s requires a measured positive value",
+      "servo_fit.coulomb_friction_nm requires a measured positive value",
+      "servo_fit.armature_kg_m2 requires a measured positive value",
+      "servo_fit.max_speed_rad_s requires a measured positive value",
+      "measurement log SHA-256 is required"
+    ],
+    "note": "Record validity does not establish walking performance or replace fitting the simulator to these measurements."
+  },
+  "remaining": [
+    "Hardware measurements and actuator fit confirmation",
+    "Long training and multi-seed locomotion evaluation",
+    "Hardware log parity and supported first-motion verification"
+  ],
+  "walking_policy_ready": false,
+  "hardware_walk_verified": false
+}

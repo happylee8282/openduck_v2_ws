@@ -1,0 +1,12 @@
+{
+  "urdf_sha256": "e8aa9c589671e6423f275cb584e019dbee1972c07a7d2cf9a16539689d58693d",
+  "mass_kg": 2.107140705,
+  "physical_links": 15,
+  "moving_joints": 14,
+  "mesh_files": 55,
+  "urdf_inertia_limits_meshes": "passed",
+  "isaac_usd_readback": "not_run",
+  "official_mjcf_fk_poses": 32,
+  "max_position_error_m": 1.1282932680101165e-06,
+  "max_rotation_error_rad": 1.1544479299881688e-05
+}

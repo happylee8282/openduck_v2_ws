@@ -1,0 +1,23 @@
+{
+  "status": "validated_nominal_flat_straight_stop",
+  "checkpoint": "policies/flat_straight_v2.pt",
+  "sha256": "8ed31af1c07788fe1c4612af80e04bc1027163fd8b8bc05468a18111d113d284",
+  "task": "Isaac-Open-Duck-StraightV6-Direct-v0",
+  "scope": "Nominal full-mass v2 flat ground, forward0.10m/s and stop; IMU attitude heading hold and forward scale included. Not hardware validated. Full domain randomization did not pass.",
+  "nominal_assessments": [
+    "validation/straight_walk_2026-11-10/v6_100_calibrated/assessment.json",
+    "validation/straight_walk_2026-11-10/candidate_seed44/assessment.json"
+  ],
+  "video_assessment": "validation/straight_walk_2026-11-10/final_video/assessment.json",
+  "control_profile": {
+    "head_control_mode": "stabilized",
+    "target_filter_tau_s": 0.0,
+    "head_target_speed": 1.0,
+    "reward_profile": "straight_v6",
+    "heading_hold_kp": 2.0,
+    "heading_hold_max_rate": 0.35,
+    "heading_hold_filter_tau": 0.25,
+    "forward_command_scale": 0.85,
+    "lateral_command_trim": 0.0
+  }
+}

@@ -1,0 +1,48 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+
+# Local editor and environment files
+.idea/
+.vscode/
+.env
+.venv/
+venv/
+
+# Local Isaac/Omniverse generated files
+*.usd
+*.usda
+*.usdc
+Robots/open_duck_mini_training.usd
+
+# Model artifacts are published through GitHub Releases
+*.pt
+*.onnx
+duck_model/
+
+# Local logs, datasets, and generated outputs
+logs/
+runs/
+result_img/
+outputs/
+data/motions/
+
+# Raw screen recordings and bulky local captures.
+# Keep optimized README media in docs/assets/ instead.
+*.mp4
+*.mov
+*.mkv
+*.avi
+
+# Long-form notes and teaching material kept out of the code repository
+STARTUP_STEPS.md
+README_POLICY_FROM_USD.md
+README_TERRAIN_TARGET_HEIGHT.md
+open_duck_jump/README_JUMP_TASK.md
+
+# Local validation, packaging and interpreter caches
+validation/
+work/
+*.egg-info/
+
+.ruff_cache/

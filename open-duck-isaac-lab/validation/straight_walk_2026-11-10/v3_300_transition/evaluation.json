@@ -1,0 +1,336 @@
+{
+  "status": "completed",
+  "checkpoint": "/home/happy/openduck_ws/open-duck-isaac-lab/logs/rsl_rl/open_duck_v2_straight/2026-11-10_02-09-28_expert_neck_balanced_v3/model_300.pt",
+  "contract_hash": "f5fd6f541d73e4d0f550273ac6d6e1db24c29ec8b9f402f7e8e4373cafe47e50",
+  "head_control_mode": "stabilized",
+  "command_sequence": "stop_go_stop",
+  "phase_metrics": {
+    "initial_stop": {
+      "mean_velocity": [
+        -0.00027929063071496785,
+        0.0007250226917676628,
+        -0.007207659538835287
+      ],
+      "planar_speed_mean_m_s": 0.0023252954706549644,
+      "yaw_mae_rad_s": 0.007600792217999697
+    },
+    "forward": {
+      "mean_velocity": [
+        0.0913635715842247,
+        0.007166658062487841,
+        -0.002342670690268278
+      ],
+      "planar_speed_mean_m_s": 0.14869457483291626,
+      "yaw_mae_rad_s": 0.16526857018470764
+    },
+    "final_stop": {
+      "mean_velocity": [
+        4.559574881568551e-05,
+        0.00012416308163665235,
+        1.833415990404319e-05
+      ],
+      "planar_speed_mean_m_s": 0.0029384747613221407,
+      "yaw_mae_rad_s": 0.002903766930103302
+    }
+  },
+  "total_mass_mean_kg": 2.1071407794952393,
+  "head_chain_mass_mean_kg": 0.5815346837043762,
+  "target_filter_tau_s": 0.0,
+  "seed": 43,
+  "randomized": false,
+  "duration_s": 20.0,
+  "dt": 0.02,
+  "spawn_height_m": 0.172,
+  "target_height_m": 0.17,
+  "self_collisions": true,
+  "mechanical_collision_filter_distance": 2,
+  "trials_per_command": 8,
+  "summary": {
+    "stop_go_stop": {
+      "survival_rate": 1.0,
+      "mean_survival_s": 20.0,
+      "xy_rmse_m_s": 0.09672610647976398,
+      "yaw_mae_rad_s": 0.10929440893232822,
+      "mean_velocity": [
+        0.05310937762260437,
+        0.0049217051127925515,
+        -0.0016323963354807347
+      ]
+    }
+  },
+  "trials": [
+    {
+      "xy_rmse_m_s": 0.09660960733890533,
+      "yaw_mae_rad_s": 0.10894041508436203,
+      "mean_velocity": [
+        0.05309427157044411,
+        0.004381546750664711,
+        0.0022849654778838158
+      ],
+      "displacement_xy_m": [
+        1.062788963317871,
+        0.17760157585144043
+      ],
+      "mean_height_m": 0.17059853672981262,
+      "head_joint_velocity_rms_rad_s": [
+        0.23377041518688202,
+        0.5770925283432007,
+        0.6829198002815247,
+        0.47107794880867004
+      ],
+      "mean_torque_saturation": 0.0,
+      "mean_action_clipping": 0.0,
+      "command": "stop_go_stop",
+      "trial": 0,
+      "survived": true,
+      "survival_s": 20.0,
+      "foot_landings": [
+        64.0,
+        48.0
+      ],
+      "stable_foot_landings": [
+        23.0,
+        25.0
+      ]
+    },
+    {
+      "xy_rmse_m_s": 0.09720861911773682,
+      "yaw_mae_rad_s": 0.10636885464191437,
+      "mean_velocity": [
+        0.05272853374481201,
+        0.004578080959618092,
+        0.0009077617432922125
+      ],
+      "displacement_xy_m": [
+        1.055565357208252,
+        0.15912342071533203
+      ],
+      "mean_height_m": 0.17036902904510498,
+      "head_joint_velocity_rms_rad_s": [
+        0.23387578129768372,
+        0.576213538646698,
+        0.6895674467086792,
+        0.47043073177337646
+      ],
+      "mean_torque_saturation": 0.0,
+      "mean_action_clipping": 0.0,
+      "command": "stop_go_stop",
+      "trial": 1,
+      "survived": true,
+      "survival_s": 20.0,
+      "foot_landings": [
+        65.0,
+        48.0
+      ],
+      "stable_foot_landings": [
+        23.0,
+        25.0
+      ]
+    },
+    {
+      "xy_rmse_m_s": 0.09751910716295242,
+      "yaw_mae_rad_s": 0.11012002825737,
+      "mean_velocity": [
+        0.053295478224754333,
+        0.004920224659144878,
+        -0.006175113841891289
+      ],
+      "displacement_xy_m": [
+        1.0753424167633057,
+        0.11164939403533936
+      ],
+      "mean_height_m": 0.17051388323307037,
+      "head_joint_velocity_rms_rad_s": [
+        0.23585477471351624,
+        0.5653567910194397,
+        0.6948492527008057,
+        0.4780377745628357
+      ],
+      "mean_torque_saturation": 0.0,
+      "mean_action_clipping": 0.0,
+      "command": "stop_go_stop",
+      "trial": 2,
+      "survived": true,
+      "survival_s": 20.0,
+      "foot_landings": [
+        71.0,
+        48.0
+      ],
+      "stable_foot_landings": [
+        23.0,
+        24.0
+      ]
+    },
+    {
+      "xy_rmse_m_s": 0.09607817977666855,
+      "yaw_mae_rad_s": 0.1052536889910698,
+      "mean_velocity": [
+        0.05278629809617996,
+        0.005895466543734074,
+        0.005789132788777351
+      ],
+      "displacement_xy_m": [
+        1.0505731105804443,
+        0.20897400379180908
+      ],
+      "mean_height_m": 0.17053915560245514,
+      "head_joint_velocity_rms_rad_s": [
+        0.2308177500963211,
+        0.60367751121521,
+        0.6973337531089783,
+        0.47515448927879333
+      ],
+      "mean_torque_saturation": 0.0,
+      "mean_action_clipping": 0.0,
+      "command": "stop_go_stop",
+      "trial": 3,
+      "survived": true,
+      "survival_s": 20.0,
+      "foot_landings": [
+        61.0,
+        46.0
+      ],
+      "stable_foot_landings": [
+        24.0,
+        23.0
+      ]
+    },
+    {
+      "xy_rmse_m_s": 0.09690126776695251,
+      "yaw_mae_rad_s": 0.11333724856376648,
+      "mean_velocity": [
+        0.05396243557333946,
+        0.004203934222459793,
+        -0.009696858935058117
+      ],
+      "displacement_xy_m": [
+        1.094758152961731,
+        0.09247744083404541
+      ],
+      "mean_height_m": 0.17040102183818817,
+      "head_joint_velocity_rms_rad_s": [
+        0.2369823455810547,
+        0.5334543585777283,
+        0.6832065582275391,
+        0.4632100760936737
+      ],
+      "mean_torque_saturation": 0.0,
+      "mean_action_clipping": 0.0,
+      "command": "stop_go_stop",
+      "trial": 4,
+      "survived": true,
+      "survival_s": 20.0,
+      "foot_landings": [
+        68.0,
+        46.0
+      ],
+      "stable_foot_landings": [
+        23.0,
+        23.0
+      ]
+    },
+    {
+      "xy_rmse_m_s": 0.09592464566230774,
+      "yaw_mae_rad_s": 0.1069464385509491,
+      "mean_velocity": [
+        0.052726861089468,
+        0.005545905791223049,
+        0.005972453858703375
+      ],
+      "displacement_xy_m": [
+        1.0430970191955566,
+        0.2208271026611328
+      ],
+      "mean_height_m": 0.17055962979793549,
+      "head_joint_velocity_rms_rad_s": [
+        0.22943536937236786,
+        0.597153902053833,
+        0.6910370588302612,
+        0.47325244545936584
+      ],
+      "mean_torque_saturation": 0.0,
+      "mean_action_clipping": 0.0,
+      "command": "stop_go_stop",
+      "trial": 5,
+      "survived": true,
+      "survival_s": 20.0,
+      "foot_landings": [
+        59.0,
+        49.0
+      ],
+      "stable_foot_landings": [
+        23.0,
+        23.0
+      ]
+    },
+    {
+      "xy_rmse_m_s": 0.0966530591249466,
+      "yaw_mae_rad_s": 0.11106167733669281,
+      "mean_velocity": [
+        0.053230080753564835,
+        0.004959857556968927,
+        -0.0047092130407691
+      ],
+      "displacement_xy_m": [
+        1.0712006092071533,
+        0.15514397621154785
+      ],
+      "mean_height_m": 0.17061163485050201,
+      "head_joint_velocity_rms_rad_s": [
+        0.235536128282547,
+        0.5775046944618225,
+        0.6963385939598083,
+        0.4633423984050751
+      ],
+      "mean_torque_saturation": 0.0,
+      "mean_action_clipping": 0.0,
+      "command": "stop_go_stop",
+      "trial": 6,
+      "survived": true,
+      "survival_s": 20.0,
+      "foot_landings": [
+        64.0,
+        47.0
+      ],
+      "stable_foot_landings": [
+        23.0,
+        23.0
+      ]
+    },
+    {
+      "xy_rmse_m_s": 0.0969143658876419,
+      "yaw_mae_rad_s": 0.11232692003250122,
+      "mean_velocity": [
+        0.05305106192827225,
+        0.004888624418526888,
+        -0.007432298734784126
+      ],
+      "displacement_xy_m": [
+        1.0705435276031494,
+        0.1311424970626831
+      ],
+      "mean_height_m": 0.17053452134132385,
+      "head_joint_velocity_rms_rad_s": [
+        0.2304094135761261,
+        0.5675164461135864,
+        0.685767650604248,
+        0.4597027003765106
+      ],
+      "mean_torque_saturation": 0.0,
+      "mean_action_clipping": 0.0,
+      "command": "stop_go_stop",
+      "trial": 7,
+      "survived": true,
+      "survival_s": 20.0,
+      "foot_landings": [
+        63.0,
+        48.0
+      ],
+      "stable_foot_landings": [
+        23.0,
+        23.0
+      ]
+    }
+  ],
+  "protocol": "Fixed commands, first episode only, no respawns; errors use samples before termination."
+}

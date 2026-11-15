@@ -1,0 +1,11 @@
+{
+  "passed": 6,
+  "checks": [
+    "published_archive_installs_three_hash_matched_models",
+    "idempotent_restore_preserves_existing_models",
+    "preflight_conflict_preserves_user_model_and_prevents_partial_install",
+    "corrupt_archive_rejected_without_policy_writes",
+    "symlink_rejected_before_install",
+    "changed_posture_reference_rejected"
+  ]
+}

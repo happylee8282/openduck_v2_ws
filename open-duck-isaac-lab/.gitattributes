@@ -1,0 +1,10 @@
+*.gif binary
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.svg text eol=lf
+*.stl binary
+*.part binary
+*.urdf text eol=lf
+*.py text eol=lf
+*.md text eol=lf

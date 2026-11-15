@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "rollout": "/home/happy/openduck_ws/open-duck-isaac-lab/validation/multiskill_2026-11-10/smooth_seed62/rollout.npz",
+  "skills": {
+    "forward": {
+      "sha256": "8ed31af1c07788fe1c4612af80e04bc1027163fd8b8bc05468a18111d113d284",
+      "obs_dim": 101,
+      "actual_simulator_samples": 2048,
+      "onnx_samples": 64,
+      "errors": {
+        "rsl_rl_max_abs_error": 0.0,
+        "recorded_sim_action_max_abs_error": 5.364418029785156e-07,
+        "torchscript_max_abs_error": 0.0,
+        "onnx_reference_max_abs_error": 4.3213367462158203e-07
+      }
+    },
+    "backward": {
+      "sha256": "45520602afb003d097b5c7aff178cb87b1d0125825d317b2dc14c687d0dc70ae",
+      "obs_dim": 101,
+      "actual_simulator_samples": 2048,
+      "onnx_samples": 64,
+      "errors": {
+        "rsl_rl_max_abs_error": 0.0,
+        "recorded_sim_action_max_abs_error": 5.662441253662109e-07,
+        "torchscript_max_abs_error": 0.0,
+        "onnx_reference_max_abs_error": 2.980232238769531e-07
+      }
+    },
+    "posture": {
+      "sha256": "0d65497d27236e745d4702cc4266ec69faa5de340bed8b429f5040fc0c772eb9",
+      "obs_dim": 103,
+      "actual_simulator_samples": 2048,
+      "onnx_samples": 64,
+      "errors": {
+        "rsl_rl_max_abs_error": 0.0,
+        "recorded_sim_action_max_abs_error": 8.195638656616211e-08,
+        "torchscript_max_abs_error": 0.0,
+        "onnx_reference_max_abs_error": 4.470348358154297e-08
+      }
+    }
+  },
+  "scope": "Actor and normalizer output parity. The multiskill scheduler, heading preprocessing, IK reference and motor target processing remain required."
+}

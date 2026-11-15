@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "open-duck-isaac-lab"
+version = "0.2.0"
+description = "Open Duck Mini v2 reference contract and Isaac Lab tasks"
+requires-python = ">=3.11,<3.12"
+dependencies = ["numpy>=1.26,<3", "torch>=2.7,<2.8", "gymnasium>=0.29,<1.3"]
+
+[project.optional-dependencies]
+export = ["onnx>=1.17,<2", "onnxruntime>=1.20,<2"]
+
+[tool.setuptools.packages.find]
+include = ["open_duck_v2*", "open_duck_complex_terrain*", "open_duck_imitation*"]
+
+[tool.setuptools.package-data]
+"open_duck_complex_terrain.agents" = ["*.yaml"]
+"open_duck_imitation.agents" = ["*.yaml"]
+
+[tool.ruff]
+target-version = "py311"
+
+[tool.ruff.lint.per-file-ignores]
+"tools/*.py" = ["E402"]  # Standalone tools add the repository to sys.path before package imports.

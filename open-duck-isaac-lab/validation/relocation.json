@@ -1,0 +1,56 @@
+{
+  "date": "2026-11-09",
+  "status": "moved_and_hash_verified",
+  "source": "/home/happy/Documents/Codex/2026-10-28/https-github-com-apirrone-open-duck/outputs/Open_Duck/open-duck-isaac-lab",
+  "destination": "/home/happy/openduck_ws/open-duck-isaac-lab",
+  "files_verified": 253,
+  "source_symlink_preserved": true,
+  "workspace_launcher": "/home/happy/openduck_ws/duck.sh",
+  "git_working_tree_preserved": true,
+  "isaac_python": "/home/happy/miniconda3/envs/env_isaaclab/bin/python",
+  "checks": {
+    "cpu_regressions": {
+      "status": "passed",
+      "count": 22
+    },
+    "actual_physx": {
+      "validation": "actual Isaac Sim / USD / PhysX",
+      "status": "passed",
+      "policy_performance": "not_run",
+      "hardware_walk": "not_run",
+      "versions": {
+        "torch": "2.7.0+cu128",
+        "isaacsim": "5.0.0.0",
+        "rsl-rl-lib": "2.3.3",
+        "gymnasium": "1.2.0"
+      },
+      "gpu": "NVIDIA GeForce RTX 5070, 580.178.04, 12227 MiB",
+      "stage": "completed",
+      "smoke_steps": 32,
+      "usd_mass_kg": 2.1071410179138184,
+      "task": "flat",
+      "policy_shape": [
+        1,
+        101
+      ],
+      "critic_shape": [
+        1,
+        222
+      ],
+      "randomization_resets": 1,
+      "note": "Smoke and readback passed; no learned policy or hardware performance claim"
+    },
+    "checkpoint_playback": {
+      "status": "passed",
+      "steps": 32,
+      "falls": 0,
+      "checkpoint": "/home/happy/openduck_ws/open-duck-isaac-lab/logs/rsl_rl/open_duck_v2_101_velocity/2026-11-04_12-46-59_v2_validation/model_2.pt",
+      "note": "Bounded playback smoke, not policy quality certification"
+    },
+    "training_cli_help": "passed"
+  },
+  "post_transfer_changes": [
+    "run.sh workspace CLI launcher and README path instructions",
+    "Restore load_rsl_rl_actor public re-export used by playback"
+  ]
+}

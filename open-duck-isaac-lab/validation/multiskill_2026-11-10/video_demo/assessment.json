@@ -1,0 +1,106 @@
+{
+  "accepted": true,
+  "engineering_criteria_not_certification": true,
+  "scope": "Nominal full-mass v2 flat ground. First episode only; no root pose correction or respawns. Locomotion criteria retained from forward verification; posture uses >=25mm lowering and <=10mm height recovery, repeated cycles.",
+  "seed": 64,
+  "forward_sha256": "8ed31af1c07788fe1c4612af80e04bc1027163fd8b8bc05468a18111d113d284",
+  "summary": {
+    "demo": {
+      "trials": 1,
+      "survived": 1,
+      "accepted": 1,
+      "acceptance_rate": 1.0,
+      "mean_velocity": [
+        0.008422660641372204,
+        0.00037608668208122253,
+        -0.0024927081540226936
+      ],
+      "mean_displacement_xy_m": [
+        0.4224341809749603,
+        -0.05744447931647301
+      ]
+    }
+  },
+  "trials": [
+    {
+      "command": "demo",
+      "trial": 0,
+      "duration_s": 52.0,
+      "survived": true,
+      "survival_s": 52.0,
+      "stable_foot_landings": [
+        48.0,
+        47.0
+      ],
+      "mean_velocity": [
+        0.008422660641372204,
+        0.00037608668208122253,
+        -0.0024927081540226936
+      ],
+      "xy_rmse_m_s": 0.10878349840641022,
+      "yaw_mae_rad_s": 0.08420348167419434,
+      "displacement_xy_m": [
+        0.4224341809749603,
+        -0.05744447931647301
+      ],
+      "mean_height_m": 0.16311527788639069,
+      "mean_torque_saturation": 0.0001648351753829047,
+      "metrics": {
+        "world_displacement_xy_m": [
+          0.4224341809749603,
+          -0.05744447931647301
+        ],
+        "final_heading_rad": -0.056523390114307404,
+        "max_abs_heading_rad": 0.090339794754982,
+        "cycle_xy_rmse_m_s": 0.022218715399503708,
+        "cycle_yaw_mae_rad_s": 0.0229897890239954,
+        "mean_velocity": [
+          0.008422660641372204,
+          0.00037608668208122253,
+          -0.0024927081540226936
+        ],
+        "mean_torque_saturation": 0.0001648351753829047,
+        "phases": {
+          "forward": {
+            "mean_velocity": [
+              0.10728437453508377,
+              0.005719644483178854,
+              -0.015645289793610573
+            ]
+          },
+          "backward": {
+            "mean_velocity": [
+              -0.10462332516908646,
+              -0.0006512337713502347,
+              0.0012572510167956352
+            ]
+          },
+          "forward_after_posture": {
+            "mean_velocity": [
+              0.10756850987672806,
+              0.010626603849232197,
+              -0.020600100979208946
+            ]
+          }
+        },
+        "height_reduction_m": 0.037285223603248596,
+        "low_both_contact_fraction": 1.0,
+        "standing_return_error_m": 0.0015110820531845093,
+        "final_planar_speed_m_s": 0.0006453478126786649
+      },
+      "checks": {
+        "survived_full_trial": true,
+        "forward_speed": true,
+        "backward_speed": true,
+        "forward_after_posture_speed": true,
+        "posture_lowers_at_least_25_mm": true,
+        "low_both_contact_at_least_95_percent": true,
+        "standing_height_recovered_within_10_mm": true,
+        "final_stop_speed_at_most_0_015": true,
+        "max_heading_at_most_0_15": true,
+        "net_lateral_at_most_0_15": true
+      },
+      "accepted": true
+    }
+  ]
+}
